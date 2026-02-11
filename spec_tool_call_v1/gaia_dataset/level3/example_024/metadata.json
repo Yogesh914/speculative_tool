@@ -1,0 +1,14 @@
+{
+  "task_id": "0512426f-4d28-49f0-be77-06d05daec096",
+  "question": "In the YouTube 360 VR video from March 2018 narrated by the voice actor of Lord of the Rings' Gollum, what number was mentioned by the narrator directly after dinosaurs were first shown in the video?",
+  "level": "3",
+  "final_answer": "100000000",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"gollum voice actor\" on Google search.\n2. Noted the answer.\n3. Searched \"youtube 360 vr andy serkis\" on Google search.\n4. Opened the top result (We Are Stars with Andy Serkis - 360 VR Video).\n5. Confirmed the date was in March 2018.\n6. Watched the video until dinosaurs appeared (approximately 8:45).\n7. Recorded the narrated number.",
+    "Number of steps": "7",
+    "How long did this take?": "15 minutes",
+    "Tools": "1. Search engine\n2. Web browser\n3. Audio capability\n4. Video capability",
+    "Number of tools": "4"
+  }
+}

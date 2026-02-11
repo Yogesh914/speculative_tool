@@ -1,0 +1,14 @@
+{
+  "task_id": "f46b4380-207e-4434-820b-f32ce04ae2a4",
+  "question": "It is 1999. Before you party like it is 1999, please assist me in settling a bet.\n\nFiona Apple and Paula Cole released albums prior to 1999. Of these albums, which didn't receive a letter grade from Robert Christgau? Provide your answer as a comma delimited list of album titles, sorted alphabetically.",
+  "level": "2",
+  "final_answer": "Harbinger, Tidal",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. search \"Fiona Apple discography\"\n2. find her album released prior to 1999 was \"Tidal\"\n3. search \"Paula Cole discography\"\n4. find her album released prior to 1999 was \"This Fire\" and \"Harbinger\".\n5. search \"Robert Christgau\"\n6. use his website to search \"Fiona Apple\"\n7. note his review for Tidal was an emoticon, not a letter grade\n8. use his website to search \"Paula Cole\"\n9. note his review for This Fire was a C+ and that he did not review Harbinger.",
+    "Number of steps": "9",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. web browser\n2. search engine",
+    "Number of tools": "2"
+  }
+}

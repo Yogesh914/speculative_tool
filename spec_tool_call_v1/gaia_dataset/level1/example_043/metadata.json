@@ -1,0 +1,14 @@
+{
+  "task_id": "23dd907f-1261-4488-b21c-e9185af91d5e",
+  "question": "In Audre Lorde\u2019s poem \u201cFather Son and Holy Ghost\u201d, what is the number of the stanza in which some lines are indented?",
+  "level": "1",
+  "final_answer": "2",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the web for \u201cAudre Lorde Father Son and Holy Ghost\u201d.\n2. Click on Poetry Foundation result.\n3. Note the stanza that appears to have lines indented, the second one.\n4. Return to search results to confirm.\n5. Click on second result.\n6. Confirm that the indentation appears in the second stanza here as well.",
+    "Number of steps": "6",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Search engine\n2. Web browser",
+    "Number of tools": "2"
+  }
+}

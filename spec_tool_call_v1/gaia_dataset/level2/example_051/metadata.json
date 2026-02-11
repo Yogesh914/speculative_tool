@@ -1,0 +1,14 @@
+{
+  "task_id": "d700d50d-c707-4dca-90dc-4528cddd0c80",
+  "question": "Who composed the song that was performed by a rooster and a hamster in separate animated videos at separate tempos with different lyrics? Answer using the format First name Last name.",
+  "level": "2",
+  "final_answer": "Roger Miller",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"song performed by rooster and hamster\" on Google.\n2. Opened https://en.wikipedia.org/wiki/The_Hampsterdance_Song.\n3. Noted the song \"Whistle Stop\" was the original to use the tune.\n4. Followed the link to https://en.wikipedia.org/wiki/Robin_Hood_(1973_film).\n5. Found the composer of \"Whistle Stop\".",
+    "Number of steps": "5",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Web browser\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

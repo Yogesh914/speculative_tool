@@ -1,0 +1,14 @@
+{
+  "task_id": "b9763138-c053-4832-9f55-86200cb1f99c",
+  "question": "Compute the check digit the Tropicos ID for the Order Helotiales would have if it were an ISBN-10 number.",
+  "level": "2",
+  "final_answer": "3",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search \"Tropicos ID Order Helotiales\"\n2. Find the correct ID on the first result\n3. Search \"isbn 10 check digit calculator\" or calculate check digit by hand",
+    "Number of steps": "3",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. web browser\n2. search engine\n3. calculator",
+    "Number of tools": "3"
+  }
+}

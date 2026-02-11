@@ -1,0 +1,14 @@
+{
+  "task_id": "27d5d136-8563-469e-92bf-fd103c28b57c",
+  "question": "\u00ac(A \u2227 B) \u2194 (\u00acA \u2228 \u00acB)\n\u00ac(A \u2228 B) \u2194 (\u00acA \u2227 \u00acB)\n(A \u2192 B) \u2194 (\u00acB \u2192 \u00acA)\n(A \u2192 B) \u2194 (\u00acA \u2228 B)\n(\u00acA \u2192 B) \u2194 (A \u2228 \u00acB)\n\u00ac(A \u2192 B) \u2194 (A \u2227 \u00acB)\n\nWhich of the above is not logically equivalent to the rest? Provide the full statement that doesn't fit.",
+  "level": "1",
+  "final_answer": "(\u00acA \u2192 B) \u2194 (A \u2228 \u00acB)",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Determine the truth values of the first statement: Recognize this is one of De Morgan's Laws showing how to distribute negation over the and conjunction - so it is a tautology.\n2. Determine the truth values of the second statement: Recognize this is one of De Morgan's Laws showing how to distribute negation over the or - so it is a tautology.\n3. Determine the truth values of the third statement: Recognize this is the definition of the contrapositive - so it is a tautology.\n4. Determine the truth values of the fourth statement: Recognize this as an alternative way of stating the conditional - so it is a tautology.\n5. Determine the truth values of the fifth statement: I don't recognize this, so check its truth values:\n6. A: True, B: True |  (\u00acA \u2192 B) \u2194 (A \u2228 \u00acB) = (\u00acT \u2192 T) \u2194 (T \u2228 \u00acT) = (F \u2192 T) \u2194 (T \u2228 F) = T \u2194 T = T\n7. A: True, B: False |  (\u00acA \u2192 B) \u2194 (A \u2228 \u00acB) = (\u00acT \u2192 F) \u2194 (T \u2228 \u00acF) = (F \u2192 F) \u2194 (T \u2228 T) = T \u2194 T = T\n8. A: False, B: True |  (\u00acA \u2192 B) \u2194 (A \u2228 \u00acB) = (\u00acF \u2192 T) \u2194 (F \u2228 \u00acT) = (T \u2192 T) \u2194 (F \u2228 \u00acT) = T \u2194 (F \u2228 F) = T \u2194 F = F\n9. The fifth statement is not a tautology so is the statement that is not logically equivalent. We were asked for only one statement, so can stop here.",
+    "Number of steps": "9",
+    "How long did this take?": "5-20 minutes",
+    "Tools": "None",
+    "Number of tools": "0"
+  }
+}

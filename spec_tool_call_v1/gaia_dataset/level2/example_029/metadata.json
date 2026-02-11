@@ -1,0 +1,14 @@
+{
+  "task_id": "6b078778-0b90-464d-83f6-59511c811b01",
+  "question": "The Metropolitan Museum of Art has a portrait in its collection with an accession number of 29.100.5. Of the consecrators and co-consecrators of this portrait's subject as a bishop, what is the name of the one who never became pope?",
+  "level": "2",
+  "final_answer": "Alfonso Visconti",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. I searched for \"Metropolitan Museum of Art search collection\" using a search engine to get to the \"Search the Collection\" page on the Metropolitan Museum of Art's website.\n2. I selected \"Accession Number\" in the search field dropdown and entered \"29.100.5\" into the text input, noting that the only result is a portrait titled \"Cardinal Fernando Ni\u00f1o de Guevara (1541\u20131609)\"\n3. I went to Fernando Ni\u00f1o de Guevara's Wikipedia page and noted that he was consecrated bishop by Pope Clement VIII with Camillo Borghese and Alfonso Visconti as co-consecrators.\n4. I eliminated Pope Clement VIII as the answer since he was obviously a pope based on his title.\n5. I went to Camillo Borghese's Wikipedia page and noted that he became Pope Paul V, eliminating him as the answer.\n6. I went to Alfonso Visconti's Wikipedia page and noted that he never became pope, so the answer to the question is \"Alfonso Visconti\".",
+    "Number of steps": "6",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Web browser\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

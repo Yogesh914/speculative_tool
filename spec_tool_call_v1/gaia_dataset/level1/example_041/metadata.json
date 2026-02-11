@@ -1,0 +1,14 @@
+{
+  "task_id": "dc22a632-937f-4e6a-b72f-ba0ff3f5ff97",
+  "question": "What was the complete title of the book in which two James Beard Award winners recommended the restaurant where Ali Khan enjoyed a New Mexican staple in his cost-conscious TV show that started in 2015? Write the numbers in plain text if there are some in the title.",
+  "level": "1",
+  "final_answer": "Five Hundred Things To Eat Before It's Too Late: and the Very Best Places to Eat Them",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"Ali Khan New Mexico staple TV show\" on Google.\n2. Opened \"Albuquerque | Cheap Eats\" at https://www.cookingchanneltv.com/shows/cheap-eats/episodes/albuquerque.\n3. Noted the New Mexico staple and the list of restaurants.\n4. Searched \"Albuquerque Cheap Eats carne avodava\" on Google.\n5. Confirmed the restaurant name (Papa Felipe's) from the results.\n6. Searched \"James Beard Award winners Papa Felipe's\" on Google.\n7. Opened \"Papa Felipe's Mexican Restaurant - Albuquerque, New ...\" at https://www.nmgastronome.com/?p=4572.\n8. Clicked the link on the book title.\n9. Copied the full book title from Amazon.",
+    "Number of steps": "9",
+    "How long did this take?": "15 minutes",
+    "Tools": "1. Web browser\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

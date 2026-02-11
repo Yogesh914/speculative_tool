@@ -1,0 +1,14 @@
+{
+  "task_id": "bda648d7-d618-4883-88f4-3466eabd860e",
+  "question": "Where were the Vietnamese specimens described by Kuznetzov in Nedoshivina's 2010 paper eventually deposited? Just give me the city name without abbreviations.",
+  "level": "1",
+  "final_answer": "Saint Petersburg",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search \"Kuznetzov Nedoshivina 2010\"\n2. Find the 2010 paper \"A catalogue of type specimens of the Tortricidae described by V. I. Kuznetzov from Vietnam and deposited in the Zoological Institute, St. Petersburg\"",
+    "Number of steps": "2",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. search engine",
+    "Number of tools": "1"
+  }
+}

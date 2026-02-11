@@ -1,0 +1,14 @@
+{
+  "task_id": "b4cc024b-3f5e-480e-b96a-6656493255b5",
+  "question": "The photograph in the Whitney Museum of American Art's collection with accession number 2022.128 shows a person holding a book. Which military unit did the author of this book join in 1813? Answer without using articles.",
+  "level": "2",
+  "final_answer": "Russian-German Legion",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Use search engine to search for \"Whitney Museum of American Art collection search\".\n2. Go to the Whitney Museum's collection search webpage.\n3. Enter 2022.128 in the search box and submit the search.\n4. Open the single result, titled \"Rain in Rifle Season, Distributions from Split-Interest Trusts, Price Includes Uniform, Never Hit Soft, 2003\".\n5. Verify that this photograph has the correct accession number.\n6. Note that the subject of the photograph is holding the book \"On War\", by Carl von Clausewitz.\n7. Go to the Wikipedia page for Carl von Clausewitz.\n8. Search the page for 1813 to find that Carl von Clausewitz joined the Russian-German Legion in 1813.\n9. Go to the Wikipedia page for Russian-German Legion to verify that this was a military unit.",
+    "Number of steps": "9",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Web browser\n2. Search engine\n3. Tool to extract text from images",
+    "Number of tools": "3"
+  }
+}

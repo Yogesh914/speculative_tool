@@ -1,0 +1,14 @@
+{
+  "task_id": "05407167-39ec-4d3a-a234-73a9120c325d",
+  "question": "In the 2018 VSCode blog post on replit.com, what was the command they clicked on in the last video to remove extra lines?",
+  "level": "2",
+  "final_answer": "Format Document",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Opened replit.com.\n2. Clicked \"Blog\".\n3. Searched \"vscode\".\n4. Opened \"Zero Setup VSCode Intelligence\" from 2018.\n5. Scrolled down to the bottom video.\n6. Noted the command used (Format Document).",
+    "Number of steps": "6",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Web browser\n2. GIF parsing tools",
+    "Number of tools": "2"
+  }
+}

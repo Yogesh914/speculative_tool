@@ -1,0 +1,14 @@
+{
+  "task_id": "cf106601-ab4f-4af9-b045-5295fe67b37d",
+  "question": "What country had the least number of athletes at the 1928 Summer Olympics? If there's a tie for a number of athletes, return the first in alphabetical order. Give the IOC country code as your answer.",
+  "level": "1",
+  "final_answer": "CUB",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Look up the 1928 Summer Olympics on Wikipedia\n2. Look at a table of athletes from countries.\n3. See that two countries had 1 and 2 athletes, so disregard those and choose the Cuba as CUB.",
+    "Number of steps": "3",
+    "How long did this take?": "5 minutes",
+    "Tools": "None",
+    "Number of tools": "0"
+  }
+}

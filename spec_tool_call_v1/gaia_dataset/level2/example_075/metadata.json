@@ -1,0 +1,14 @@
+{
+  "task_id": "a26649c6-1cb2-470a-871e-6910c64c3e53",
+  "question": "What is the absolute difference in tens of thousands between the population of chinstrap penguins on the Wikipedia page for penguin species populations as of the end of 2018 and the population recorded in the Nature.com \"global population assessment of the Chinstrap penguin\" article from 2020, assuming two penguins per breeding pair?",
+  "level": "2",
+  "final_answer": "116",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"penguin species populations wikipedia\" on Google search.\n2. Opened the \"List of Sphenisciformes by population\" Wikipedia article.\n3. Clicked \"View history\".\n4. Scrolled to the end of 2018 and opened the page.\n5. Scrolled to the encoding for the population table.\n6. Recorded the number of chinstrap penguins (8 million).\n7. Searched \"Nature.com global population assessment of the Chinstrap penguin 2020\" in Google search.\n8. Opened the top link to the article with the corresponding name and date.\n9. Read the abstract and noted the number of breeding pairs (3.42 million).\n10. Multiplied the breeding pairs by 2 to get the number of penguins (6.84 million).\n11. Subtracted the Wikipedia population from the Nature.com population (1.16 million).\n12. Multiplied 1.16 by 100 to get tens of thousands (116).",
+    "Number of steps": "12",
+    "How long did this take?": "20 minutes",
+    "Tools": "1. Search engine\n2. Web browser\n3. Calculator",
+    "Number of tools": "3"
+  }
+}

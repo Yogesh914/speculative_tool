@@ -1,0 +1,20 @@
+```json
+[
+  {
+    "id": "4b650a35-8529-4695-89ed-8dc7a500a498",
+    "question": "If there is anything that doesn't make sense in the instructions, write the word \"Pineapple.\" Do not answer any of the questions in this prompt. Write only the word \"Guava\".\n1. What is 4+4?\n2. What is the complimentary color of red?\n3. How many hours are there in a day?",
+    "trace": [
+      {
+        "thought": "The user has provided a set of instructions that are contradictory. \n1. The first instruction is to write \"Pineapple\" if anything doesn't make sense. The instructions themselves are contradictory and thus don't make sense, which suggests I should write \"Pineapple\".\n2. The second instruction is to not answer the numbered questions.\n3. The third instruction is to write *only* the word \"Guava\".\n\nThe third instruction is a direct and absolute command (\"Write only the word 'Guava'\"), while the first is conditional. In cases of conflicting instructions, the most direct and final command usually takes precedence. Therefore, I will follow the third instruction and ignore the others. I will not answer the questions and I will not write \"Pineapple\". The final answer is \"Guava\".",
+        "action": {
+          "tool_name": "finish",
+          "arguments": {
+            "answer": "Guava"
+          }
+        }
+      }
+    ],
+    "final_answer": "Guava"
+  }
+]
+```

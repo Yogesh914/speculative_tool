@@ -1,0 +1,14 @@
+{
+  "task_id": "67e8878b-5cef-4375-804e-e6291fdbe78a",
+  "question": "The attached PDF lists accommodations in the resort community of Seahorse Island. Which type of accommodation has a higher average rating in Seahorse Island?",
+  "level": "2",
+  "final_answer": "Hotels",
+  "file_name": "67e8878b-5cef-4375-804e-e6291fdbe78a.pdf",
+  "annotator_metadata": {
+    "Steps": "1. Open the provided file.\n2. Sum the ratings of the rows listed under Hotels, to get 19.\n3. Divide this by the number of hotels, 5, to get an average rating of 3.8.\n4. Sum the ratings of the rows listed under Rental Houses, to get 35.\n5. Divide this by the number of rental houses, 10, to get an average rating of 3.5.\n6. Since the average rating for hotels is higher than that for rental houses, answer \u201cHotels\u201d.",
+    "Number of steps": "6",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. PDF viewer\n2. Calculator",
+    "Number of tools": "2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "7673d772-ef80-4f0f-a602-1bf4485c9b43",
+  "question": "On Cornell Law School website's legal information institute, under the fifth section of federal rules alphabetically, what word was deleted in the last amendment to the first rule in the article that has \"witnesses\" in the most titles as of 2021?",
+  "level": "1",
+  "final_answer": "inference",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"Cornell Law School legal information institute\" on Google.\n2. Opened https://www.law.cornell.edu/.\n3. Clicked Get The Law > Federal Rules > Federal Rules of Evidence (fourth section down).\n4. Found the article that has \"witnesses\" in the most titles (VII).\n5. Opened the first rule (701).\n6. Scrolled to the last amendment as of 2021 (2011 amendment).\n7. Found the word that was deleted (inference).",
+    "Number of steps": "7",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Web browser\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

@@ -1,0 +1,34 @@
+# LLM and LangGraph dependencies
+langchain-core
+langchain-openai
+langchain
+langgraph
+openai
+
+# Data processing
+pandas>=2.0.0
+pydantic>=2.0.0
+
+# HTTP clients
+httpx>=0.25.0
+requests>=2.31.0
+
+# Web scraping and parsing
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# File format support
+openpyxl>=3.1.0  # Excel files
+pdfplumber>=0.11.0  # PDF extraction
+python-docx>=1.1.0  # Word documents
+PyYAML>=6.0.0  # YAML files
+Pillow>=10.0.0  # Image processing
+
+# Text processing
+nltk>=3.8.0  # Sentence tokenization (optional but recommended)
+
+# UI and logging
+rich>=13.0.0
+
+# Environment variables
+python-dotenv>=1.0.0

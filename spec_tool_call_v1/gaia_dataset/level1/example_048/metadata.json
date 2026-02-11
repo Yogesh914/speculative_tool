@@ -1,0 +1,14 @@
+{
+  "task_id": "50ec8903-b81f-4257-9450-1085afd2c319",
+  "question": "A standard Rubik\u2019s cube has been broken into cubes making up its sides. The cubes are jumbled, and one is removed. There are 6 cubes with one colored face, 12 edge cubes with two colored faces, and 8 corner cubes with three colored faces. All blue cubes have been found. All cubes directly left, right, above, and below the orange center cube have been found, along with the center cube. The green corners have all been found, along with all green that borders yellow. For all orange cubes found, the opposite face\u2019s cubes have been found. The removed cube has two colors on its faces. What are they? Answer using a comma separated list, with the colors ordered alphabetically.",
+  "level": "1",
+  "final_answer": "green, white",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Set up a standard Rubik's cube (red opposite orange, white opposite yellow, green opposite blue).\n2. Eliminated blue cubes, along with adjacent colors.\n3. Eliminated orange cubes, along with adjacent colors.\n4. Eliminated green corners and the green/yellow edge.\n5. Eliminated red, opposite of orange, cubes and adjacent colors.\n6. Identified the last possible two-face cube.",
+    "Number of steps": "6",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Rubik's cube model",
+    "Number of tools": "1"
+  }
+}

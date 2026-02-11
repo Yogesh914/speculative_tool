@@ -1,0 +1,49 @@
+# LLM and LangGraph dependencies
+langchain-core
+langchain-openai
+langchain
+langchain-google-genai  # For Gemini models
+langgraph
+openai
+
+# Multi-provider search tools (9 total)
+langchain-exa  # Exa semantic/neural search
+langchain-tavily>=0.2.0  # Tavily AI-optimized search
+langchain-community>=0.0.20  # For Arxiv, AskNews, Brave, DuckDuckGo, Serper, SearXNG, You.com
+duckduckgo-search  # DuckDuckGo (no API key needed)
+arxiv  # Arxiv academic papers (no API key needed)
+pymupdf  # PDF support for Arxiv
+asknews  # AskNews (news search with 300k+ articles/day)
+
+# Data processing
+pandas>=2.0.0
+pydantic>=2.0.0
+
+# HTTP clients
+httpx>=0.25.0
+requests>=2.31.0
+
+# Web scraping and parsing
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# File format support
+openpyxl>=3.1.0  # Excel files
+pdfplumber>=0.11.0  # PDF extraction
+python-docx>=1.1.0  # Word documents
+PyYAML>=6.0.0  # YAML files
+Pillow>=10.0.0  # Image processing
+
+# Text processing
+nltk>=3.8.0  # Sentence tokenization (optional but recommended)
+
+# Embeddings for verification
+numpy  # For cosine similarity computation
+sentence-transformers  # For local embeddings (optional)
+
+# UI and logging
+rich>=13.0.0
+tqdm>=4.66.0
+
+# Environment variables
+python-dotenv>=1.0.0

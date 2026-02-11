@@ -1,0 +1,38 @@
+```json
+[
+  {
+    "id": "e0c10771-d627-4fd7-9694-05348e54ee36",
+    "question": "Take the gender split from the 2011 Bulgarian census about those who have completed tertiary education. Subtract the smaller number from the larger number, then return the difference in thousands of women. So if there were 30.1 thousand more men, you'd give \"30.1\"",
+    "trace": [
+      {
+        "thought": "I need to find the gender split for people with tertiary education in the 2011 Bulgarian census. I will use a search engine to find the official census results.",
+        "action": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "2011 Bulgarian census tertiary education gender split"
+          }
+        }
+      },
+      {
+        "thought": "The search results point to the official report from the Bulgarian National Statistical Institute on the 2011 census. According to the data on educational structure, 791.8 thousand women and 556.9 thousand men had completed tertiary education. Now I need to subtract the smaller number from the larger number.",
+        "action": {
+          "tool_name": "calculator",
+          "arguments": {
+            "expression": "791.8 - 556.9"
+          }
+        }
+      },
+      {
+        "thought": "The result of the subtraction is 234.9. The question asks for the difference in thousands of women. Since the number of women is larger, the difference is 234.9 thousand. The final answer is this numerical value.",
+        "action": {
+          "tool_name": "final_answer",
+          "arguments": {
+            "answer": "234.9"
+          }
+        }
+      }
+    ],
+    "final_answer": "234.9"
+  }
+]
+```

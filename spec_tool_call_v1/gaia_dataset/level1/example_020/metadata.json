@@ -1,0 +1,14 @@
+{
+  "task_id": "6f37996b-2ac7-44b0-8e68-6d28256631b4",
+  "question": "Given this table defining * on the set S = {a, b, c, d, e}\n\n|*|a|b|c|d|e|\n|---|---|---|---|---|---|\n|a|a|b|c|b|d|\n|b|b|c|a|e|c|\n|c|c|a|b|b|a|\n|d|b|e|b|e|d|\n|e|d|b|a|d|c|\n\nprovide the subset of S involved in any possible counter-examples that prove * is not commutative. Provide your answer as a comma separated list of the elements in the set in alphabetical order.",
+  "level": "1",
+  "final_answer": "b, e",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Compile the markdown.\n2. Look at the table across the diagonal to see if any portions are not symmetrical.\n3. See that b * e != e * b, but all others are symmetrical.",
+    "Number of steps": "3",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Markdown",
+    "Number of tools": "1"
+  }
+}

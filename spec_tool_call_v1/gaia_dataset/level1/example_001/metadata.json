@@ -1,0 +1,14 @@
+{
+  "task_id": "8e867cd7-cff9-4e6c-867a-ff5ddc2550be",
+  "question": "How many studio albums were published by Mercedes Sosa between 2000 and 2009 (included)? You can use the latest 2022 version of english wikipedia.",
+  "level": "1",
+  "final_answer": "3",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. I did a search for Mercedes Sosa\n2. I went to the Wikipedia page for her\n3. I scrolled down to \"Studio albums\"\n4. I counted the ones between 2000 and 2009",
+    "Number of steps": "4",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. web browser\n2. google search",
+    "Number of tools": "2"
+  }
+}

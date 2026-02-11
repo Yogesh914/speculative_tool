@@ -1,0 +1,14 @@
+{
+  "task_id": "72e110e7-464c-453c-a309-90a95aed6538",
+  "question": "Under DDC 633 on Bielefeld University Library's BASE, as of 2020, from what country was the unknown language article with a flag unique from the others?",
+  "level": "1",
+  "final_answer": "Guatemala",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"Bielefeld University Library's BASE\" on Google.\n2. Opened https://www.base-search.net/.\n3. Clicked \"Browsing\".\n4. Selected Clicked \"Dewey Decimal Classification (DDC) > 6 > 63 > 633.\n5. Refined to Unknown Language.\n6. Found the only article with a flag unique from the others in the search from pre-2020.\n7. Copied the country name from the institution.",
+    "Number of steps": "7",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Web browser\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

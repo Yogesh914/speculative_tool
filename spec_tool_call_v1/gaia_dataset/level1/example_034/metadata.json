@@ -1,0 +1,14 @@
+{
+  "task_id": "f918266a-b3e0-4914-865d-4faa564f1aef",
+  "question": "What is the final numeric output from the attached Python code?",
+  "level": "1",
+  "final_answer": "0",
+  "file_name": "f918266a-b3e0-4914-865d-4faa564f1aef.py",
+  "annotator_metadata": {
+    "Steps": "1. Run the attached Python code",
+    "Number of steps": "1",
+    "How long did this take?": "30 seconds",
+    "Tools": "1. Python",
+    "Number of tools": "1"
+  }
+}

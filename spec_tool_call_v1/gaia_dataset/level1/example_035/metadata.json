@@ -1,0 +1,14 @@
+{
+  "task_id": "11af4e1a-5f45-467d-9aeb-46f4bb0bf034",
+  "question": "How many more blocks (also denoted as layers) in BERT base encoder than the encoder from the architecture proposed in Attention is All You Need?",
+  "level": "1",
+  "final_answer": "6",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the internet for \"blocks in bert base\"\n2. Examine the search results page to locate the answer (12)\n3. Search the internet for \"attention is all you need layers\"\n4, Navigate to https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf from the search results page\n5. Examine the architecture section of the PDF to locate the answer (12)\n6. Calculate the difference between the two numbers",
+    "Number of steps": "6",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Web browser\n2. Search engine\n3. Calculator",
+    "Number of tools": "3"
+  }
+}

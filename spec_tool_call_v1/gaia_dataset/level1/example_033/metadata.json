@@ -1,0 +1,14 @@
+{
+  "task_id": "0383a3ee-47a7-41a4-b493-519bdefe0488",
+  "question": "On the BBC Earth YouTube video of the Top 5 Silliest Animal Moments, what species of bird is featured?",
+  "level": "1",
+  "final_answer": "Rockhopper penguin",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search \"top 5 silliest animal moments bbc earth youtube\" on Google search.\n2. Open the top link to \"Top 5 Silliest Animal Moments! | BBC Earth - YouTube\".\n3. Listen to the video until the species is named.",
+    "Number of steps": "3",
+    "How long did this take?": "3 minutes",
+    "Tools": "1. Web browser\n2. Search engine\n3. Video recognition tools",
+    "Number of tools": "3"
+  }
+}

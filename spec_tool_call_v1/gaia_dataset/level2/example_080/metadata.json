@@ -1,0 +1,14 @@
+{
+  "task_id": "e0c10771-d627-4fd7-9694-05348e54ee36",
+  "question": "Take the gender split from the 2011 Bulgarian census about those who have completed tertiary education. Subtract the smaller number from the larger number, then return the difference in thousands of women. So if there were 30.1 thousand more men, you'd give \"30.1\"",
+  "level": "2",
+  "final_answer": "234.9",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Find the report put out by the Bulgarian on the 2011 census by searching.\n2. Find the requested data under the Educational Structure Section of the Report.\n3. 791.8 thousand women - 556.9 thousand men = 234.9 thousand women",
+    "Number of steps": "3",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. search engine\n2. pdf reader/extracter",
+    "Number of tools": "2"
+  }
+}

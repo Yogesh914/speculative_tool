@@ -1,0 +1,14 @@
+{
+  "task_id": "1dcc160f-c187-48c2-b68e-319bd4354f3d",
+  "question": "According to Openreview.net, at the NeurIPS 2022 Conference, how many papers by an author named Yuri were accepted with a \"certain\" recommendation?",
+  "level": "2",
+  "final_answer": "3",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Went to openreview.net.\n2. Scroll down and clicked the \"All venues\" link.\n3. Clicked \"NeurIPS\".\n4. Opened the \"2022\" toggle menu.\n5. Clicked \"NeurIPS 2022 Conference\".\n6. Opened the top paper.\n7. Clicked \"Go to NeurIPS 2022 Conference homepage\".\n8. Searched \"Yuri\" in the search box.\n9. Opened each of the four papers and checked the Recommendation field.\n10. Counted the \"Certain\" recommendations.",
+    "Number of steps": "8",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Web browser\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

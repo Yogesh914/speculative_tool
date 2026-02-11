@@ -1,0 +1,14 @@
+{
+  "task_id": "8b3379c0-0981-4f5b-8407-6444610cb212",
+  "question": "What is the maximum length in meters of #9 in the first National Geographic short on YouTube that was ever released according to the Monterey Bay Aquarium website? Just give the number.",
+  "level": "2",
+  "final_answer": "1.8",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"National Geographic YouTube\" on Google search.\n2. Opened the National Geographic YouTube channel.\n3. Clicked \"Shorts\".\n4. Watched the oldest short (\"Which shark species is the most massive? #SharkFest #Shorts\") and noted #9 (Blacktip Reef).\n5. Searched \"blacktip reef monterey bay aquarium\" on Google search.\n6. Opened \"Blacktip reef shark\" on the Monterey Bay Aquarium website and noted the maximum length.",
+    "Number of steps": "6",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Web browser\n2. Search engine\n3. Video recognition tools",
+    "Number of tools": "3"
+  }
+}

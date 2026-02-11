@@ -1,0 +1,14 @@
+{
+  "task_id": "73c1b9fe-ee1d-4cf4-96ca-35c08f97b054",
+  "question": "According to the USGS, in what year was the American Alligator first found west of Texas (not including Texas)?",
+  "level": "2",
+  "final_answer": "1954",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the web for \u201cAmerican Alligator USGS\u201d.\n2. Click result for the USGS Species Profile.\n3. Click \u201cAnimated Map\u201d.\n4. Click the \u201cSkip years with no recorded sightings\u201d button.\n5. Zoom out on the map to better view the whole U.S.\n6. Move the slider back to the beginning, then advance it until I see a red dot pop up west of Texas.\n7. Note the year that the dot appears, 1954.",
+    "Number of steps": "7",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Search engine\n2. Web browser\n3. Image recognition",
+    "Number of tools": "3"
+  }
+}

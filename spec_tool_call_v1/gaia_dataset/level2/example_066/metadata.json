@@ -1,0 +1,14 @@
+{
+  "task_id": "708b99c5-e4a7-49cb-a5cf-933c8d46470d",
+  "question": "On the DeepFruits fruit detection graph on Connected Papers from 2016, what feature caused the largest bubble to be the size it is?",
+  "level": "2",
+  "final_answer": "Citations",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"connected papers deepfruits\" on Google search.\n2. Opened the \"DeepFruits: A Fruit Detection System Using Deep Neural Networks\" graph on ConnectedPapers.com.\n3. Clicked on the largest bubble (Redmon, 2015).\n4. Clicked on other bubbles to compare their features.\n5. Noted that Citations was the feature where the Redmon bubble exceeded all the others.",
+    "Number of steps": "5",
+    "How long did this take?": "7 minutes",
+    "Tools": "1. Graph interaction tools\n2. Web browser\n3. Search engine",
+    "Number of tools": "3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "16d825ff-1623-4176-a5b5-42e0f5c2b0ac",
+  "question": "What time was the Tri-Rail train that carried the most passengers on May 27, 2019 scheduled to arrive in Pompano Beach? Express your answer in the 12-hour digital clock format without leading zero if any, and include whether it is AM or PM.",
+  "level": "2",
+  "final_answer": "6:41 PM",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the web for \u201ctri rail ridership may 2019\u201d.\n2. Click result for Tri-Rail website.\n3. Click drop-down for 2019.\n4. Click PDF for May 2019 ridership report.\n5. Scroll down to find the statistics for each train.\n6. Locate the ridership numbers for the 27th, and scroll to find the train with the highest number for that day: train number P685.\n7. Search the web for \u201ctri rail schedule may 2019\u201d.\n8. Click result for Tri-Rail website.\n9. Noticing that the train doesn\u2019t appear on the weekday schedule, click the link for the weekend/holiday schedule. May 27th may have been a holiday.\n10. Locate the time that P685 is scheduled to arrive at Pompano Beach: 6:41 PM.\n11. To confirm, search \u201cmay 2019 holidays\u201d.\n12. Verify that May 27th, 2019 was the Memorial Day holiday.\n13. Since the Tri-Rail website didn\u2019t give a date for its schedule, search the web for \u201ctri rail schedule changes\u201d to see if the schedule has changed since 2019.\n14. The only result mentioning a schedule change dates to 2015, so 6:41 PM seems like the answer.",
+    "Number of steps": "14",
+    "How long did this take?": "5-10 minutes",
+    "Tools": "1. Search engine\n2. Web browser\n3. PDF viewer",
+    "Number of tools": "3"
+  }
+}

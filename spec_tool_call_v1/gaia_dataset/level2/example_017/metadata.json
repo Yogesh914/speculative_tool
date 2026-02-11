@@ -1,0 +1,14 @@
+{
+  "task_id": "0ff53813-3367-4f43-bcbd-3fd725c1bf4b",
+  "question": "What two-word type of model did Manash Pratim Kashyap's and PS Fader's studies in customer retention studies published during 2018-2019 have in common (no punctuation)?",
+  "level": "2",
+  "final_answer": "beta geometric",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"Manash Pratim Kashyap customer retention\" on Google.\n2. Opened https://www.journalijar.com/article/26843/a-simple-model-for-analyzing-the-customer-retention-comparing-rural-and-urban-store/.\n3. Noted \"discrete time beta geometric model\" in the abstract.\n4. Searched \"PS Fader customer retention\" on Google.\n5. Opened https://www.sciencedirect.com/science/article/abs/pii/S1094996807700233.\n6. Noted \"basic model (known as a \u201cshifted-beta-geometric\u201d)\" in the abstract.\n7. Extracted the two words in common.",
+    "Number of steps": "6",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Web browser\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

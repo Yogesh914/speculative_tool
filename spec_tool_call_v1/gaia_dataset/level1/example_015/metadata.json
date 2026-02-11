@@ -1,0 +1,14 @@
+{
+  "task_id": "b415aba4-4b68-4fc6-9b89-2c812e55a3e1",
+  "question": "In Nature journal's Scientific Reports conference proceedings from 2012, in the article that did not mention plasmons or plasmonics, what nano-compound is studied? Don't use the prefix nano in your answer if there is one.",
+  "level": "1",
+  "final_answer": "diamond",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"nature scientific reports\" on Google.\n2. Opened https://www.nature.com/srep/.\n3. Selected Explore Content > Research Articles.\n4. Filtered for Conference Proceedings from 2012.\n5. Opened each article link.\n6. Checked for \"plasmon\" or \"plasmonic\".\n7. Noted the nano-compound in the article that did not include either.",
+    "Number of steps": "7",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Web browser\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "5cfb274c-0207-4aa7-9575-6ac0bd95d9b2",
+  "question": "Each cell in the attached spreadsheet represents a plot of land. The color of the cell indicates who owns that plot. Green cells are plots owned by Earl Smith. Can Earl walk through every plot he owns (and no other plots) and return to his starting plot without backtracking? For this question, consider backtracking to be any instance where Earl would enter a plot of land he had already entered since leaving his starting plot.",
+  "level": "1",
+  "final_answer": "No",
+  "file_name": "5cfb274c-0207-4aa7-9575-6ac0bd95d9b2.xlsx",
+  "annotator_metadata": {
+    "Steps": "1. Open the spreadsheet\n2. Analyze the green cells.\n3. Note that the shape of Earl\u2019s plots is not a loop. There are dead-ends that can\u2019t be traversed without doubling back to a previously-traversed cell.",
+    "Number of steps": "3",
+    "How long did this take?": "1 minute",
+    "Tools": "1. Excel\n2. Image recognition\n3. Color recognition",
+    "Number of tools": "3"
+  }
+}

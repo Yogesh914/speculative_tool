@@ -1,0 +1,14 @@
+{
+  "task_id": "7d4a7d1d-cac6-44a8-96e8-ea9584a70825",
+  "question": "According to Girls Who Code, how long did it take in years for the percentage of computer scientists that were women to change by 13% from a starting point of 37%?",
+  "level": "1",
+  "final_answer": "22",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"Girls Who Code\" on Google.\n2. Opened https://girlswhocode.com/.\n3. Clicked \"About Us\".\n4. Noted that the chart started at 37% and declined to 24%.\n5. Subtracted the marked years to find the number of years (2017 - 1995 = 22).",
+    "Number of steps": "5",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Web browser\n2. Search engine\n3. Calculator",
+    "Number of tools": "3"
+  }
+}

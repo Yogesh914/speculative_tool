@@ -1,0 +1,14 @@
+{
+  "task_id": "6359a0b1-8f7b-499b-9336-840f9ab90688",
+  "question": "What is the area of the green polygon in the attached file? The numbers in purple represent the lengths of the side they are next to.",
+  "level": "2",
+  "final_answer": "39",
+  "file_name": "6359a0b1-8f7b-499b-9336-840f9ab90688.png",
+  "annotator_metadata": {
+    "Steps": "1. Open the attached file.\n2. Split the shape into five rectangles.\n3. Find the missing side lengths from the side lengths that are given.\n4. Find the area for each rectangle.\n5. Add the areas together to get the area of the entire shape, 39.",
+    "Number of steps": "5",
+    "How long did this take?": "5-10 minutes",
+    "Tools": "1. Image recognition\n2. OCR\n3. Calculator",
+    "Number of tools": "3"
+  }
+}

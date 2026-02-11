@@ -1,0 +1,14 @@
+{
+  "task_id": "2d83110e-a098-4ebb-9987-066c06fa42d0",
+  "question": ".rewsna eht sa \"tfel\" drow eht fo etisoppo eht etirw ,ecnetnes siht dnatsrednu uoy fI",
+  "level": "1",
+  "final_answer": "Right",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Read the instructions in reverse",
+    "Number of steps": "1",
+    "How long did this take?": "1 minute",
+    "Tools": "1. A word reversal tool / script",
+    "Number of tools": "0"
+  }
+}

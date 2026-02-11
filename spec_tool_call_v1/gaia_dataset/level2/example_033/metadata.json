@@ -1,0 +1,14 @@
+{
+  "task_id": "9f41b083-683e-4dcf-9185-ccfeaa88fa45",
+  "question": "How many pages if the 2023 IPCC report (85 pages version) mentions nuclear energy?",
+  "level": "2",
+  "final_answer": "0",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Open a web browser\n2. Go to a search engine\n3. Search for \"2023 IPCC report\"\n4. Click on the link for \"AR6 Synthesis Report: Climate Change 2023\" \n5. Click on \"Read the Report\"\n6. Click on \"SYR (Full volume)\n7. Check the page count of the PDF\n8. Go back to the previous page (report is too long)\n9. Click on \"Longer Report\"\n10. Check the page count of the PDF\n11. Search for \"nuclear energy\" within the PDF\n12. Look at the total number of hits",
+    "Number of steps": "12",
+    "How long did this take?": "4 minutes",
+    "Tools": "1. Web browser\n2. Search engine\n3. PDF reader ",
+    "Number of tools": "3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "7cc4acfa-63fd-4acc-a1a1-e8e529e0a97f",
+  "question": "The attached spreadsheet contains the sales of menu items for a regional fast-food chain. Which city had the greater total sales: Wharvton or Algrimand?",
+  "level": "2",
+  "final_answer": "Wharvton",
+  "file_name": "7cc4acfa-63fd-4acc-a1a1-e8e529e0a97f.xlsx",
+  "annotator_metadata": {
+    "Steps": "1. Open the attached file.\n2. Locate the rows representing Wharvton and Algrimand.\n3. Write functions to sum each relevant row.\n4. Compare the sums.",
+    "Number of steps": "4",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Excel\n2. Calculator",
+    "Number of tools": "2"
+  }
+}

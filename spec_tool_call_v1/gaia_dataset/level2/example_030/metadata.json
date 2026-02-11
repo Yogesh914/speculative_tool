@@ -1,0 +1,14 @@
+{
+  "task_id": "076c8171-9b3b-49b9-a477-244d2a532826",
+  "question": "The attached file contains a list of vendors in the Liminal Springs mall, along with each vendor\u2019s monthly revenue and the rent they pay the mall. I want you to find the vendor that makes the least money, relative to the rent it pays. Then, tell me what is listed in the \u201ctype\u201d column for that vendor.",
+  "level": "2",
+  "final_answer": "Finance",
+  "file_name": "076c8171-9b3b-49b9-a477-244d2a532826.xlsx",
+  "annotator_metadata": {
+    "Steps": "1. Open the attached spreadsheet.\n2. Write formulas that divide each row\u2019s revenue by its rent. This will tell me how much each vendor makes relative to its rent.\n3. Note the value in the type column for the lowest result, Finance.",
+    "Number of steps": "3",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Microsoft Excel\n2. Calculator",
+    "Number of tools": "2"
+  }
+}

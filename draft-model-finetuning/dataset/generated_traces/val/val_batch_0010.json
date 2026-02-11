@@ -1,0 +1,30 @@
+```json
+[
+  {
+    "id": "9d191bce-651d-4746-be2d-7ef8ecadb9c2",
+    "question": "Examine the video at https://www.youtube.com/watch?v=1htKBjuUWec.\n\nWhat does Teal'c say in response to the question \"Isn't that hot?\"",
+    "trace": [
+      {
+        "thought": "The user wants to know what a character named Teal'c says in a YouTube video. I need to analyze the video content to find the specific dialogue. The best tool for this is `video_inspector`, which can transcribe the audio from the video.",
+        "action": {
+          "tool_name": "video_inspector",
+          "arguments": {
+            "video_url": "https://www.youtube.com/watch?v=1htKBjuUWec",
+            "operation": "transcribe_video"
+          }
+        }
+      },
+      {
+        "thought": "I have the transcript of the video. Now I need to search for the question \"Isn't that hot?\" and find the response that immediately follows it. Based on the transcript, the line following \"Isn't that hot?\" is \"Extremely\". This is the answer.",
+        "action": {
+          "tool_name": "final_answer",
+          "arguments": {
+            "answer": "Extremely"
+          }
+        }
+      }
+    ],
+    "final_answer": "Extremely"
+  }
+]
+```

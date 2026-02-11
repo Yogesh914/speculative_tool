@@ -1,0 +1,1559 @@
+{
+  "metadata": {
+    "total_examples": 53,
+    "processed": 53,
+    "valid_results": 53,
+    "errors": 0,
+    "exact_matches": 1,
+    "exact_match_rate": 1.8867924528301887,
+    "tool_matches": 25,
+    "tool_match_rate": 47.16981132075472,
+    "avg_args_similarity": 27.012057704491724,
+    "actor_model": "gpt-5",
+    "spec_model": "gpt-5-mini"
+  },
+  "results": [
+    {
+      "task_id": "e1fc63a2-da7a-432f-be78-7c4a95598703",
+      "question": "If Eliud Kipchoge could maintain his record-making marathon pace indefinitely, how many thousand hours would it take him to run the distance between the Earth and the Moon its closest approach? Please use the minimum perigee value on the Wikipedia page for the Moon when carrying out your calculation. Round your result to the nearest 1000 hours and do not use any comma separators if necessary.",
+      "actor_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "Wikipedia Moon minimum perigee value minimum perigee km",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "Moon perigee minimum Wikipedia minimum perigee distance closest approach perigee 'minimum perigee' 'Moon' site:wikipedia.org",
+            "expand_search": false
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 30.76923076923077,
+          "actor_tool": "search_with_content",
+          "spec_tool": "search_with_content",
+          "actor_args": {
+            "query": "Wikipedia Moon minimum perigee value minimum perigee km",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Moon perigee minimum Wikipedia minimum perigee distance closest approach perigee 'minimum perigee' 'Moon' site:wikipedia.org",
+            "expand_search": false
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 30.76923076923077,
+      "actor_time": 13.6055428981781,
+      "spec_time": 7.900784969329834
+    },
+    {
+      "task_id": "8e867cd7-cff9-4e6c-867a-ff5ddc2550be",
+      "question": "How many studio albums were published by Mercedes Sosa between 2000 and 2009 (included)? You can use the latest 2022 version of english wikipedia.",
+      "actor_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "Mercedes Sosa studio albums 2000 2009 Wikipedia",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "Mercedes Sosa discography English Wikipedia 2022 studio albums 2000 2009 Mercedes Sosa album list site:en.wikipedia.org",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 53.84615384615385,
+          "actor_tool": "search_with_content",
+          "spec_tool": "search_with_content",
+          "actor_args": {
+            "query": "Mercedes Sosa studio albums 2000 2009 Wikipedia",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Mercedes Sosa discography English Wikipedia 2022 studio albums 2000 2009 Mercedes Sosa album list site:en.wikipedia.org",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 53.84615384615385,
+      "actor_time": 1.9305789470672607,
+      "spec_time": 2.5538828372955322
+    },
+    {
+      "task_id": "ec09fa32-d03f-4bf8-84b0-1f16922c3ae4",
+      "question": "Here's a fun riddle that I think you'll enjoy.\n\nYou have been selected to play the final round of the hit new game show \"Pick That Ping-Pong\". In this round, you will be competing for a large cash prize. Your job will be to pick one of several different numbered ping-pong balls, and then the game will commence. The host describes how the game works.\n\nA device consisting of a winding clear ramp and a series of pistons controls the outcome of the game. The ramp feeds balls onto a platform. The platform has room for three ping-pong balls at a time. The three balls on the platform are each aligned with one of three pistons. At each stage of the game, one of the three pistons will randomly fire, ejecting the ball it strikes. If the piston ejects the ball in the first position on the platform the balls in the second and third position on the platform each advance one space, and the next ball on the ramp advances to the third position. If the piston ejects the ball in the second position, the ball in the first position is released and rolls away, the ball in the third position advances two spaces to occupy the first position, and the next two balls on the ramp advance to occupy the second and third positions on the platform. If the piston ejects the ball in the third position, the ball in the first position is released and rolls away, the ball in the second position advances one space to occupy the first position, and the next two balls on the ramp advance to occupy the second and third positions on the platform.\n\nThe ramp begins with 100 numbered ping-pong balls, arranged in ascending order from 1 to 100. The host activates the machine and the first three balls, numbered 1, 2, and 3, advance to the platform. Before the random firing of the pistons begins, you are asked which of the 100 balls you would like to pick. If your pick is ejected by one of the pistons, you win the grand prize, $10,000.\n\nWhich ball should you choose to maximize your odds of winning the big prize? Please provide your answer as the number of the ball selected.",
+      "actor_tools": [],
+      "spec_tools": [
+        {
+          "name": "code_generate",
+          "args": {
+            "task_description": "Generate Python code to simulate the ping-pong game. The rules:\n- Ramp contains balls numbered 1..100 in order.\n- Platform holds up to 3 balls; initially balls 1,2,3.\n- At each step, choose one of three pistons uniformly at random (positions 1,2,3).\n- If piston 1 fires: it ejects the ball in position 1 (this counts as 'ejected by piston'); balls in positions 2 and 3 advance one space (so 2->1,3->2), and next ball from ramp (if any) enters position 3.\n- If piston 2 fires: eject ball in position 2; ball in position 1 is released and rolls away (removed but not counted as ejected by piston); ball in position 3 advances two spaces to occupy position 1; next two balls on ramp (if any) advance to positions 2 and 3.\n- If piston 3 fires: eject ball in position 3; ball in position 1 is released and rolls away; ball in position 2 advances one space to occupy position 1; next two balls from ramp go to positions 2 and 3.\n- Continue until no balls remain on platform and ramp.\n- Track for each numbered ball whether it was ejected by a piston during the run.\n\nWrite code to simulate N trials (set N=200000 by default) and compute empirical probability for each ball being ejected. Output the ball with highest probability and the top several probabilities.\n\nEnsure code is efficient.\n\nProvide the code only; no extra text.",
+            "context": null
+          }
+        }
+      ],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 76.26841187477112,
+      "spec_time": 10.976747989654541
+    },
+    {
+      "task_id": "5d0080cb-90d7-4712-bc33-848150e917d3",
+      "question": "What was the volume in m^3 of the fish bag that was calculated in the University of Leicester paper \"Can Hiccup Supply Enough Fish to Maintain a Dragon\u2019s Diet?\"",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "University of Leicester paper \"Can Hiccup Supply Enough Fish to Maintain a Dragon\u2019s Diet?\" fish bag volume m^3"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "University of Leicester 'Can Hiccup Supply Enough Fish to Maintain a Dragon\u2019s Diet?' fish bag volume m^3 'fish bag' 'volume' Leicester Hiccup Supply Enough Fish to Maintain a Dragon\u2019s Diet",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 60.86956521739131,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "University of Leicester paper \"Can Hiccup Supply Enough Fish to Maintain a Dragon\u2019s Diet?\" fish bag volume m^3"
+          },
+          "spec_args": {
+            "query": "University of Leicester 'Can Hiccup Supply Enough Fish to Maintain a Dragon\u2019s Diet?' fish bag volume m^3 'fish bag' 'volume' Leicester Hiccup Supply Enough Fish to Maintain a Dragon\u2019s Diet",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 60.86956521739131,
+      "actor_time": 3.01371693611145,
+      "spec_time": 2.971104145050049
+    },
+    {
+      "task_id": "a1e91b78-d3d8-4675-bb8d-62741b4b68a6",
+      "question": "In the video https://www.youtube.com/watch?v=L1vXCYZAYYM, what is the highest number of bird species to be on camera simultaneously?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "\"L1vXCYZAYYM\" highest number of bird species on camera simultaneously"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "\"L1vXCYZAYYM\" highest number of bird species on camera simultaneously",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 100.0,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "\"L1vXCYZAYYM\" highest number of bird species on camera simultaneously"
+          },
+          "spec_args": {
+            "query": "\"L1vXCYZAYYM\" highest number of bird species on camera simultaneously",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": true,
+      "avg_args_similarity": 100.0,
+      "actor_time": 6.757453203201294,
+      "spec_time": 4.001896142959595
+    },
+    {
+      "task_id": "46719c30-f4c3-4cad-be07-d5cb21eee6bb",
+      "question": "Of the authors (First M. Last) that worked on the paper \"Pie Menus or Linear Menus, Which Is Better?\" in 2015, what was the title of the first paper authored by the one that had authored prior papers?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "\"Pie Menus or Linear Menus, Which Is Better?\" 2015 paper"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "\"Pie Menus or Linear Menus, Which Is Better?\" 2015 paper authors",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 90.9090909090909,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "\"Pie Menus or Linear Menus, Which Is Better?\" 2015 paper"
+          },
+          "spec_args": {
+            "query": "\"Pie Menus or Linear Menus, Which Is Better?\" 2015 paper authors",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 90.9090909090909,
+      "actor_time": 6.781670093536377,
+      "spec_time": 4.0868799686431885
+    },
+    {
+      "task_id": "4b6bb5f7-f634-410e-815d-e673ab7f8632",
+      "question": "In Series 9, Episode 11 of Doctor Who, the Doctor is trapped inside an ever-shifting maze. What is this location called in the official script for the episode? Give the setting exactly as it appears in the first scene heading.",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Doctor Who Series 9 Episode 11 official script first scene heading setting ever-shifting maze Heaven Sent script PDF first scene heading",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "Heaven Sent script 'first scene heading' official script 'Heaven Sent' script scene heading 'INT.' 'EXT.' 'GALLIFREY' 'SEA OF GLASS'",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": false,
+          "args_similarity": 22.22222222222222,
+          "actor_tool": "search_web",
+          "spec_tool": "search_with_content",
+          "actor_args": {
+            "query": "Doctor Who Series 9 Episode 11 official script first scene heading setting ever-shifting maze Heaven Sent script PDF first scene heading",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Heaven Sent script 'first scene heading' official script 'Heaven Sent' script scene heading 'INT.' 'EXT.' 'GALLIFREY' 'SEA OF GLASS'",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 22.22222222222222,
+      "actor_time": 4.781763076782227,
+      "spec_time": 4.567004203796387
+    },
+    {
+      "task_id": "cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb",
+      "question": "An office held a Secret Santa gift exchange where each of its twelve employees was assigned one other employee in the group to present with a gift. Each employee filled out a profile including three likes or hobbies. On the day of the gift exchange, only eleven gifts were given, each one specific to one of the recipient's interests. Based on the information in the document, who did not give a gift?",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 5.417060136795044,
+      "spec_time": 8.576833963394165
+    },
+    {
+      "task_id": "2d83110e-a098-4ebb-9987-066c06fa42d0",
+      "question": ".rewsna eht sa \"tfel\" drow eht fo etisoppo eht etirw ,ecnetnes siht dnatsrednu uoy fI",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 5.41095495223999,
+      "spec_time": 6.015756130218506
+    },
+    {
+      "task_id": "5cfb274c-0207-4aa7-9575-6ac0bd95d9b2",
+      "question": "Each cell in the attached spreadsheet represents a plot of land. The color of the cell indicates who owns that plot. Green cells are plots owned by Earl Smith. Can Earl walk through every plot he owns (and no other plots) and return to his starting plot without backtracking? For this question, consider backtracking to be any instance where Earl would enter a plot of land he had already entered since leaving his starting plot.",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 9.922218799591064,
+      "spec_time": 10.31916618347168
+    },
+    {
+      "task_id": "27d5d136-8563-469e-92bf-fd103c28b57c",
+      "question": "\u00ac(A \u2227 B) \u2194 (\u00acA \u2228 \u00acB)\n\u00ac(A \u2228 B) \u2194 (\u00acA \u2227 \u00acB)\n(A \u2192 B) \u2194 (\u00acB \u2192 \u00acA)\n(A \u2192 B) \u2194 (\u00acA \u2228 B)\n(\u00acA \u2192 B) \u2194 (A \u2228 \u00acB)\n\u00ac(A \u2192 B) \u2194 (A \u2227 \u00acB)\n\nWhich of the above is not logically equivalent to the rest? Provide the full statement that doesn't fit.",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 6.310170888900757,
+      "spec_time": 18.405465126037598
+    },
+    {
+      "task_id": "dc28cf18-6431-458b-83ef-64b3ce566c10",
+      "question": "My family reunion is this week, and I was assigned the mashed potatoes to bring. The attendees include my married mother and father, my twin brother and his family, my aunt and her family, my grandma and her brother, her brother's daughter, and his daughter's family. All the adults but me have been married, and no one is divorced or remarried, but my grandpa and my grandma's sister-in-law passed away last year. All living spouses are attending. My brother has two children that are still kids, my aunt has one six-year-old, and my grandma's brother's daughter has three kids under 12. I figure each adult will eat about 1.5 potatoes of mashed potatoes and each kid will eat about 1/2 a potato of mashed potatoes, except my second cousins don't eat carbs. The average potato is about half a pound, and potatoes are sold in 5-pound bags. How many whole bags of potatoes do I need? Just give the number.",
+      "actor_tools": [],
+      "spec_tools": [
+        {
+          "name": "calculate",
+          "args": {
+            "expression": "11*1.5 + 3*0.5"
+          }
+        }
+      ],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 52.067939043045044,
+      "spec_time": 40.49521207809448
+    },
+    {
+      "task_id": "b816bfce-3d80-4913-a07d-69b752ce6377",
+      "question": "In Emily Midkiff's June 2014 article in a journal named for the one of Hreidmar's sons that guarded his house, what word was quoted from two different authors in distaste for the nature of dragon depictions?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Emily Midkiff June 2014 Fafnir journal article",
+            "expand_search": false
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Emily Midkiff June 2014 Fafnir article dragon depictions quoted word distaste 'Midkiff' 'Fafnir' 2014 June",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 42.857142857142854,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Emily Midkiff June 2014 Fafnir journal article",
+            "expand_search": false
+          },
+          "spec_args": {
+            "query": "Emily Midkiff June 2014 Fafnir article dragon depictions quoted word distaste 'Midkiff' 'Fafnir' 2014 June",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 42.857142857142854,
+      "actor_time": 4.557471990585327,
+      "spec_time": 5.35333514213562
+    },
+    {
+      "task_id": "72e110e7-464c-453c-a309-90a95aed6538",
+      "question": "Under DDC 633 on Bielefeld University Library's BASE, as of 2020, from what country was the unknown language article with a flag unique from the others?",
+      "actor_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "DDC 633 BASE Bielefeld unknown language article flag unique from the others 2020",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Bielefeld University Library BASE DDC 633 unknown language article flag unique from the others 2020",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": false,
+          "args_similarity": 86.66666666666667,
+          "actor_tool": "search_with_content",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "DDC 633 BASE Bielefeld unknown language article flag unique from the others 2020",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Bielefeld University Library BASE DDC 633 unknown language article flag unique from the others 2020",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 86.66666666666667,
+      "actor_time": 3.185920000076294,
+      "spec_time": 4.817301034927368
+    },
+    {
+      "task_id": "42576abe-0deb-4869-8c63-225c2d75a95a",
+      "question": "In the fictional language of Tizin, basic sentences are arranged with the Verb first, followed by the direct object, followed by the subject of the sentence. I want to express my love for apples to my Tizin friend. \n\nThe word that indicates oneself is \"Pa\" is the nominative form, \"Mato\" is the accusative form, and \"Sing\" is the genitive form. \n\nThe root verb that indicates an intense like for something is \"Maktay\". When it is used in the present, it is used in it's root form, when it is used in the preterit past, it is \"Tay\", and when it is used in the imperfect past, it is \"Aktay\". It is used differently than in English, and is better translated as \"is pleasing to\", meaning that the thing doing the liking is actually the object of the sentence rather than the subject.\n\nThe word for apples is borrowed from English in Tizin, and so it is \"Apple\" is the nominative form, \"Zapple\" is the accusative form, and \"Izapple\" is the genitive form. \n\nPlease translate \"I like apples\" to Tizin.",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 15.759991884231567,
+      "spec_time": 25.335869073867798
+    },
+    {
+      "task_id": "b415aba4-4b68-4fc6-9b89-2c812e55a3e1",
+      "question": "In Nature journal's Scientific Reports conference proceedings from 2012, in the article that did not mention plasmons or plasmonics, what nano-compound is studied? Don't use the prefix nano in your answer if there is one.",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Scientific Reports conference proceedings 2012 plasmons plasmonics article did not mention plasmons 'Scientific Reports' 2012 conference proceedings",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Scientific Reports conference proceedings 2012 Nature 'conference proceedings' 'Scientific Reports' 2012 plasmon plasmonics 'conference' 2012 Scientific Reports Nature",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 44.44444444444444,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Scientific Reports conference proceedings 2012 plasmons plasmonics article did not mention plasmons 'Scientific Reports' 2012 conference proceedings",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Scientific Reports conference proceedings 2012 Nature 'conference proceedings' 'Scientific Reports' 2012 plasmon plasmonics 'conference' 2012 Scientific Reports Nature",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 44.44444444444444,
+      "actor_time": 5.586122989654541,
+      "spec_time": 5.136091947555542
+    },
+    {
+      "task_id": "cca530fc-4052-43b2-b130-b30968d8aa44",
+      "question": "Review the chess position provided in the image. It is black's turn. Provide the correct next move for black which guarantees a win. Please provide your response in algebraic notation.",
+      "actor_tools": [],
+      "spec_tools": [
+        {
+          "name": "vision_analyze",
+          "args": {
+            "image_path": "image.png"
+          }
+        }
+      ],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 7.032970905303955,
+      "spec_time": 1.4789631366729736
+    },
+    {
+      "task_id": "935e2cff-ae78-4218-b3f5-115589b19dae",
+      "question": "In the year 2022, and before December, what does \"R\" stand for in the three core policies of the type of content that was violated in the public logs on the Legume Wikipedia page?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Legume Wikipedia public logs 2022 violation three core policies R stands for",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Legume Wikipedia public logs type of content violated public logs 'three core policies' 'R' stands for 2022 before December Legume page public logs 'three core policies' 'R'",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 36.36363636363637,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Legume Wikipedia public logs 2022 violation three core policies R stands for",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Legume Wikipedia public logs type of content violated public logs 'three core policies' 'R' stands for 2022 before December Legume page public logs 'three core policies' 'R'",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 36.36363636363637,
+      "actor_time": 14.159977912902832,
+      "spec_time": 4.288845062255859
+    },
+    {
+      "task_id": "4fc2f1ae-8625-45b5-ab34-ad4433bc21f8",
+      "question": "Who nominated the only Featured Article on English Wikipedia about a dinosaur that was promoted in November 2016?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "site:en.wikipedia.org \"Featured article\" november 2016 dinosaur nominated",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Featured Article English Wikipedia dinosaur promoted November 2016 nominated by 'November 2016' 'Featured article' 'dinosaur' 'English Wikipedia'",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 20.0,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "site:en.wikipedia.org \"Featured article\" november 2016 dinosaur nominated",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Featured Article English Wikipedia dinosaur promoted November 2016 nominated by 'November 2016' 'Featured article' 'dinosaur' 'English Wikipedia'",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 20.0,
+      "actor_time": 9.936078786849976,
+      "spec_time": 2.3220221996307373
+    },
+    {
+      "task_id": "5188369a-3bbe-43d8-8b94-11558f909a08",
+      "question": "What writer is quoted by Merriam-Webster for the Word of the Day from June 27, 2022?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Merriam-Webster Word of the Day June 27, 2022 quote writer",
+            "expand_search": false
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Merriam-Webster Word of the Day June 27, 2022 quote writer quoted by Merriam-Webster 'June 27, 2022 Word of the Day' Merriam-Webster",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 71.42857142857143,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Merriam-Webster Word of the Day June 27, 2022 quote writer",
+            "expand_search": false
+          },
+          "spec_args": {
+            "query": "Merriam-Webster Word of the Day June 27, 2022 quote writer quoted by Merriam-Webster 'June 27, 2022 Word of the Day' Merriam-Webster",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 71.42857142857143,
+      "actor_time": 2.771162986755371,
+      "spec_time": 3.5072081089019775
+    },
+    {
+      "task_id": "6f37996b-2ac7-44b0-8e68-6d28256631b4",
+      "question": "Given this table defining * on the set S = {a, b, c, d, e}\n\n|*|a|b|c|d|e|\n|---|---|---|---|---|---|\n|a|a|b|c|b|d|\n|b|b|c|a|e|c|\n|c|c|a|b|b|a|\n|d|b|e|b|e|d|\n|e|d|b|a|d|c|\n\nprovide the subset of S involved in any possible counter-examples that prove * is not commutative. Provide your answer as a comma separated list of the elements in the set in alphabetical order.",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 21.857800006866455,
+      "spec_time": 5.029465913772583
+    },
+    {
+      "task_id": "9318445f-fe6a-4e1b-acbf-c68228c9906a",
+      "question": "As a comma separated list with no whitespace, using the provided image provide all the fractions that use / as the fraction line and the answers to the sample problems. Order the list by the order in which the fractions appear.",
+      "actor_tools": [],
+      "spec_tools": [
+        {
+          "name": "vision_ocr",
+          "args": {
+            "image_path": "provided_image.png"
+          }
+        }
+      ],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 44.327632188797,
+      "spec_time": 2.2151010036468506
+    },
+    {
+      "task_id": "389793a7-ca17-4e82-81cb-2b3a2391b4b9",
+      "question": "You are a telecommunications engineer who wants to build cell phone towers on a stretch of road. In the reference file is a layout of the road and nearby houses. Each dash, \"-\", is a marker indicating a mile. Each capital H indicates a house located next to a mile marker, appearing above or below the stretch of road. Each cell phone tower can cover houses located next to the road within a 4-mile radius. Find the minimum number of cell phone towers needed to cover all houses next to the road. Your answer should be a positive numerical integer value.",
+      "actor_tools": [
+        {
+          "name": "file_read",
+          "args": {
+            "path": "reference.txt"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "file_read",
+          "args": {
+            "path": "input.txt"
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 0.0,
+          "actor_tool": "file_read",
+          "spec_tool": "file_read",
+          "actor_args": {
+            "path": "reference.txt"
+          },
+          "spec_args": {
+            "path": "input.txt"
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 3.95827579498291,
+      "spec_time": 4.740289211273193
+    },
+    {
+      "task_id": "4b650a35-8529-4695-89ed-8dc7a500a498",
+      "question": "If there is anything that doesn't make sense in the instructions, write the word \"Pineapple.\" Do not answer any of the questions in this prompt. Write only the word \"Guava\".\n1. What is 4+4?\n2. What is the complimentary color of red?\n3. How many hours are there in a day?",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 10.630974054336548,
+      "spec_time": 7.400583028793335
+    },
+    {
+      "task_id": "a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c",
+      "question": "How many slides in this PowerPoint presentation mention crustaceans?",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 20.795832872390747,
+      "spec_time": 5.829261064529419
+    },
+    {
+      "task_id": "c714ab3a-da30-4603-bacd-d008800188b9",
+      "question": "You are Van Helsing, a renowned vampire hunter. A Count of Moldova, La\u021bcu IV, son of  Costea, has tasked you with investigating the village of \u0218irnea in neighboring Wallachia. The Count's advisors have reported that a vampire was spotted crossing the border near the village, and would like you to investigate it.\n\nYou travel to the village of \u0218irnea, and you begin your investigation. One night, just before dawn, you catch a glimpse of a man in a long black cape with red lining leaping from roof-top to roof-top with superhuman agility. It's a vampire! You try to chase the creature back to its home, but the creature is too fast. However, because of the remoteness of the village, you know with absolute certainty that the vampire must be a resident of the village. You decide that your best course of action will be to visit all 100 residents of the town during the day. You know something about vampires and humans that will make your investigation possible; humans always tell the truth, but vampires always lie.\n\nIn the afternoon, you go from house to house, speaking with all 100 residents of \u0218irnea. You ask everyone the same question: \"How many vampires are living in \u0218irnea\". Everyone in the village gives the same response, \"At least one of us is a human.\"\n\nHow many residents of \u0218irnea have been turned into vampires?",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 20.411770820617676,
+      "spec_time": 16.29084062576294
+    },
+    {
+      "task_id": "9d191bce-651d-4746-be2d-7ef8ecadb9c2",
+      "question": "Examine the video at https://www.youtube.com/watch?v=1htKBjuUWec.\n\nWhat does Teal'c say in response to the question \"Isn't that hot?\"",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "1htKBjuUWec Teal'c Isn't that hot?"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "YouTube 1htKBjuUWec \"Isn't that hot\" Teal'c response",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": false,
+          "args_similarity": 33.33333333333333,
+          "actor_tool": "search_web",
+          "spec_tool": "search_with_content",
+          "actor_args": {
+            "query": "1htKBjuUWec Teal'c Isn't that hot?"
+          },
+          "spec_args": {
+            "query": "YouTube 1htKBjuUWec \"Isn't that hot\" Teal'c response",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 33.33333333333333,
+      "actor_time": 7.978352069854736,
+      "spec_time": 3.42513108253479
+    },
+    {
+      "task_id": "65afbc8a-89ca-4ad5-8d62-355bb401f61d",
+      "question": "You are given this Excel file as a map. You start on the START cell and move toward the END cell. You are allowed to move two cells per turn, and you may move up, down, left, or right. You may not move fewer than two cells, and you may not move backward. You must avoid moving onto any blue cells. On the eleventh turn, what is the 6-digit hex code (without prefix) of the color of the cell where you land after moving?",
+      "actor_tools": [],
+      "spec_tools": [
+        {
+          "name": "file_read",
+          "args": {
+            "path": "map.xlsx"
+          }
+        }
+      ],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 11.051666021347046,
+      "spec_time": 4.210406064987183
+    },
+    {
+      "task_id": "cabe07ed-9eca-40ea-8ead-410ef5e83f91",
+      "question": "What is the surname of the equine veterinarian mentioned in 1.E Exercises from the chemistry materials licensed by Marisa Alviar-Agnew & Henry Agnew under the CK-12 license in LibreText's Introductory Chemistry materials as compiled 08/21/2023?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "LibreTexts Introductory Chemistry 1.E Exercises equine veterinarian surname CK-12 Marisa Alviar-Agnew Henry Agnew 08/21/2023"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "LibreTexts Introductory Chemistry '1.E Exercises' 'Marisa Alviar-Agnew Henry Agnew CK-12' 'compiled 08/21/2023' equine veterinarian '1.E Exercises' 'equine veterinarian' 'Marisa Alviar-Agnew & Henry Agnew CK-12'",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": false,
+          "args_similarity": 34.78260869565217,
+          "actor_tool": "search_web",
+          "spec_tool": "search_with_content",
+          "actor_args": {
+            "query": "LibreTexts Introductory Chemistry 1.E Exercises equine veterinarian surname CK-12 Marisa Alviar-Agnew Henry Agnew 08/21/2023"
+          },
+          "spec_args": {
+            "query": "LibreTexts Introductory Chemistry '1.E Exercises' 'Marisa Alviar-Agnew Henry Agnew CK-12' 'compiled 08/21/2023' equine veterinarian '1.E Exercises' 'equine veterinarian' 'Marisa Alviar-Agnew & Henry Agnew CK-12'",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 34.78260869565217,
+      "actor_time": 4.059186220169067,
+      "spec_time": 3.9910099506378174
+    },
+    {
+      "task_id": "3cef3a44-215e-4aed-8e3b-b1e3f08063b7",
+      "question": "I'm making a grocery list for my mom, but she's a professor of botany and she's a real stickler when it comes to categorizing things. I need to add different foods to different categories on the grocery list, but if I make a mistake, she won't buy anything inserted in the wrong category. Here's the list I have so far:\n\nmilk, eggs, flour, whole bean coffee, Oreos, sweet potatoes, fresh basil, plums, green beans, rice, corn, bell pepper, whole allspice, acorns, broccoli, celery, zucchini, lettuce, peanuts\n\nI need to make headings for the fruits and vegetables. Could you please create a list of just the vegetables from my list? If you could do that, then I can figure out how to categorize the rest of the list into the appropriate categories. But remember that my mom is a real stickler, so make sure that no botanical fruits end up on the vegetable list, or she won't get them when she's at the store. Please alphabetize the list of vegetables, and place each item in a comma separated list.",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 41.72100281715393,
+      "spec_time": 15.450858354568481
+    },
+    {
+      "task_id": "99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3",
+      "question": "Hi, I'm making a pie but I could use some help with my shopping list. I have everything I need for the crust, but I'm not sure about the filling. I got the recipe from my friend Aditi, but she left it as a voice memo and the speaker on my phone is buzzing so I can't quite make out what she's saying. Could you please listen to the recipe and list all of the ingredients that my friend described? I only want the ingredients for the filling, as I have everything I need to make my favorite pie crust. I've attached the recipe as Strawberry pie.mp3.\n\nIn your response, please only list the ingredients, not any measurements. So if the recipe calls for \"a pinch of salt\" or \"two cups of ripe strawberries\" the ingredients on the list would be \"salt\" and \"ripe strawberries\".\n\nPlease format your response as a comma separated list of ingredients. Also, please alphabetize the ingredients.",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 26.753349781036377,
+      "spec_time": 14.309469938278198
+    },
+    {
+      "task_id": "d0633230-7067-47a9-9dbf-ee11e0a2cdd6",
+      "question": "In the Scikit-Learn July 2017 changelog, what other predictor base command received a bug fix? Just give the name, not a path.",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Scikit-Learn July 2017 changelog 'other predictor base command' bug fix",
+            "expand_search": false
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Scikit-Learn July 2017 changelog \"predictor base\" bug fix \"July 2017\" changelog predictor base command",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 53.333333333333336,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Scikit-Learn July 2017 changelog 'other predictor base command' bug fix",
+            "expand_search": false
+          },
+          "spec_args": {
+            "query": "Scikit-Learn July 2017 changelog \"predictor base\" bug fix \"July 2017\" changelog predictor base command",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 53.333333333333336,
+      "actor_time": 6.022659778594971,
+      "spec_time": 3.6120011806488037
+    },
+    {
+      "task_id": "305ac316-eef6-4446-960a-92d80d542f82",
+      "question": "Who did the actor who played Ray in the Polish-language version of Everybody Loves Raymond play in Magda M.? Give only the first name.",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Polish voice actor for Ray in Everybody Loves Raymond Wszyscy kochaj\u0105 Raymonda kto podk\u0142ada\u0142 g\u0142os Ray",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Polish-language version Everybody Loves Raymond Ray actor 'Ray' Polish dubbing 'Everybody Loves Raymond' Polish cast 'Ray' 'Magda M.'",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 25.0,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Polish voice actor for Ray in Everybody Loves Raymond Wszyscy kochaj\u0105 Raymonda kto podk\u0142ada\u0142 g\u0142os Ray",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Polish-language version Everybody Loves Raymond Ray actor 'Ray' Polish dubbing 'Everybody Loves Raymond' Polish cast 'Ray' 'Magda M.'",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 25.0,
+      "actor_time": 7.188160181045532,
+      "spec_time": 3.14894700050354
+    },
+    {
+      "task_id": "0383a3ee-47a7-41a4-b493-519bdefe0488",
+      "question": "On the BBC Earth YouTube video of the Top 5 Silliest Animal Moments, what species of bird is featured?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "BBC Earth YouTube \"Top 5 Silliest Animal Moments\" bird species featured"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "BBC Earth YouTube 'Top 5 Silliest Animal Moments' bird species featured"
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 69.23076923076923,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "BBC Earth YouTube \"Top 5 Silliest Animal Moments\" bird species featured"
+          },
+          "spec_args": {
+            "query": "BBC Earth YouTube 'Top 5 Silliest Animal Moments' bird species featured"
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 69.23076923076923,
+      "actor_time": 2.629455089569092,
+      "spec_time": 2.090003252029419
+    },
+    {
+      "task_id": "f918266a-b3e0-4914-865d-4faa564f1aef",
+      "question": "What is the final numeric output from the attached Python code?",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 8.052454948425293,
+      "spec_time": 3.765275001525879
+    },
+    {
+      "task_id": "11af4e1a-5f45-467d-9aeb-46f4bb0bf034",
+      "question": "How many more blocks (also denoted as layers) in BERT base encoder than the encoder from the architecture proposed in Attention is All You Need?",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 8.111456155776978,
+      "spec_time": 5.700412750244141
+    },
+    {
+      "task_id": "e142056d-56ab-4352-b091-b56054bd1359",
+      "question": "Bob was invited to participate in a game show, and he advanced to the final round. The final round offered Bob the chance to win a large sum by playing a game against the host. The host has 30 shiny prop coins, each of which is worth $1,000 if Bob manages to win them by playing the game. The host hides the coins in three different prize boxes and then shuffles their order. The only rule restricting the host's coin placement is that one box must contain at least 2 coins, and one box must contain 6 more coins than another box. In order to play, Bob must submit three guesses, one guess for the number of coins in each box. The box is then opened and the number of coins is revealed. If Bob's guess is a number greater than the number of coins in the box, Bob earns no coins. If Bob guesses a number equal to or less than the number of coins in the box, Bob wins a number of coins equal to his guess.\n\nIf Bob plays uses the optimal strategy, what's the minimum amount of money he can win from the game?",
+      "actor_tools": [
+        {
+          "name": "code_exec",
+          "args": {
+            "code": "import itertools\n\ndef worst_case_payout(guesses):\n    guesses = sorted(guesses)\n    worst = float('inf')\n    # Enumerate all allocations c1,c2,c3 nonnegative integers summing to 30 with a pair differ by 6\n    allocations = []\n    for c1 in range(31):\n        for c2 in range(31-c1):\n            c3 = 30 - c1 - c2\n            cs = [c1,c2,c3]\n            # constraint: one pair differs by 6\n            ok = False\n            for a,b in itertools.permutations(cs,2):\n                if a == b + 6:\n                    ok = True\n                    break\n            if not ok:\n                continue\n            # redundant constraint: at least one box has at least 2\n            if max(cs) < 2:\n                continue\n            allocations.append(tuple(cs))\n    # Deduplicate\n    allocations = list(set(allocations))\n\n    def min_payout_for_allocation(cs, guesses):\n        # Host can permute mapping to minimize sum of guesses that fit\n        worst = float('inf')\n        for perm in set(itertools.permutations(cs)):\n            payout = 0\n            for g,c in zip(guesses,sorted(perm)): # careful: host can pair arbitrary; but we iterate all perms. But pairing guess order matters; we should consider host pairs guesses arbitrarily, so we should also permute guesses.\n                pass\n        # Actually to handle arbitrary assignments, iterate over permutations of mapping between guesses and cs.\n        worst = float('inf')\n        for perm_c in set(itertools.permutations(cs)):\n            for perm_g in set(itertools.permutations(guesses)):\n                payout = 0\n                for g,c in zip(perm_g, perm_c):\n                    payout += g if g <= c else 0\n                worst = min(worst, payout)\n        return worst\n\n    for cs in allocations:\n        w = min_payout_for_allocation(cs, guesses)\n        worst = min(worst, w)\n    return worst\n\nbest = (-1,None)\n# Search guesses from 0..30 each. But sum of guesses cannot exceed 30 to be guaranteed maybe; but let's brute force limited.\nfor g1 in range(31):\n    for g2 in range(g1,31):\n        for g3 in range(g2,31):\n            w = worst_case_payout((g1,g2,g3))\n            if w > best[0]:\n                best = (w,(g1,g2,g3))\nprint(best)"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "code_generate",
+          "args": {
+            "task_description": "Write Python code to compute the minimax value of the game described. Enumerate all triples (x1,x2,x3) of nonnegative integers summing to 30 that satisfy: at least one box has >=2 coins, and there exists two boxes with difference at least 6. For each guess triple g (integers 0..30), compute the worst-case reward the host can enforce by choosing a legal triple x and permuting assignment of counts to guesses. Reward per box is g_i if g_i <= assigned x otherwise 0. Find the guess triple(s) that maximize the worst-case reward and report the value (coins). Also return one optimal guess triple and the distribution(s) x that achieve the worst-case for that guess.",
+            "context": ""
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": false,
+          "args_similarity": 0.0,
+          "actor_tool": "code_exec",
+          "spec_tool": "code_generate",
+          "actor_args": {
+            "code": "import itertools\n\ndef worst_case_payout(guesses):\n    guesses = sorted(guesses)\n    worst = float('inf')\n    # Enumerate all allocations c1,c2,c3 nonnegative integers summing to 30 with a pair differ by 6\n    allocations = []\n    for c1 in range(31):\n        for c2 in range(31-c1):\n            c3 = 30 - c1 - c2\n            cs = [c1,c2,c3]\n            # constraint: one pair differs by 6\n            ok = False\n            for a,b in itertools.permutations(cs,2):\n                if a == b + 6:\n                    ok = True\n                    break\n            if not ok:\n                continue\n            # redundant constraint: at least one box has at least 2\n            if max(cs) < 2:\n                continue\n            allocations.append(tuple(cs))\n    # Deduplicate\n    allocations = list(set(allocations))\n\n    def min_payout_for_allocation(cs, guesses):\n        # Host can permute mapping to minimize sum of guesses that fit\n        worst = float('inf')\n        for perm in set(itertools.permutations(cs)):\n            payout = 0\n            for g,c in zip(guesses,sorted(perm)): # careful: host can pair arbitrary; but we iterate all perms. But pairing guess order matters; we should consider host pairs guesses arbitrarily, so we should also permute guesses.\n                pass\n        # Actually to handle arbitrary assignments, iterate over permutations of mapping between guesses and cs.\n        worst = float('inf')\n        for perm_c in set(itertools.permutations(cs)):\n            for perm_g in set(itertools.permutations(guesses)):\n                payout = 0\n                for g,c in zip(perm_g, perm_c):\n                    payout += g if g <= c else 0\n                worst = min(worst, payout)\n        return worst\n\n    for cs in allocations:\n        w = min_payout_for_allocation(cs, guesses)\n        worst = min(worst, w)\n    return worst\n\nbest = (-1,None)\n# Search guesses from 0..30 each. But sum of guesses cannot exceed 30 to be guaranteed maybe; but let's brute force limited.\nfor g1 in range(31):\n    for g2 in range(g1,31):\n        for g3 in range(g2,31):\n            w = worst_case_payout((g1,g2,g3))\n            if w > best[0]:\n                best = (w,(g1,g2,g3))\nprint(best)"
+          },
+          "spec_args": {
+            "task_description": "Write Python code to compute the minimax value of the game described. Enumerate all triples (x1,x2,x3) of nonnegative integers summing to 30 that satisfy: at least one box has >=2 coins, and there exists two boxes with difference at least 6. For each guess triple g (integers 0..30), compute the worst-case reward the host can enforce by choosing a legal triple x and permuting assignment of counts to guesses. Reward per box is g_i if g_i <= assigned x otherwise 0. Find the guess triple(s) that maximize the worst-case reward and report the value (coins). Also return one optimal guess triple and the distribution(s) x that achieve the worst-case for that guess.",
+            "context": ""
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 54.50593400001526,
+      "spec_time": 17.641205072402954
+    },
+    {
+      "task_id": "50ad0280-0819-4bd9-b275-5de32d3b5bcb",
+      "question": "Pull out the sentence in the following 5x7 block of text. Read from left to right and use all of the letters in order:\n\nTHESE\nAGULL\nGLIDE\nDPEAC\nEFULL\nYTOMY\nCHAIR",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 10.278503894805908,
+      "spec_time": 30.225040197372437
+    },
+    {
+      "task_id": "7673d772-ef80-4f0f-a602-1bf4485c9b43",
+      "question": "On Cornell Law School website's legal information institute, under the fifth section of federal rules alphabetically, what word was deleted in the last amendment to the first rule in the article that has \"witnesses\" in the most titles as of 2021?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "site:law.cornell.edu Federal Rules of Evidence Rule 601 deleted word last amendment",
+            "expand_search": false
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Cornell Law School Legal Information Institute fifth section of federal rules alphabetically 'federal rules' 'alphabetically' fifth section 'witnesses' 'as of 2021' 'most titles' 'witnesses'",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 10.714285714285714,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "site:law.cornell.edu Federal Rules of Evidence Rule 601 deleted word last amendment",
+            "expand_search": false
+          },
+          "spec_args": {
+            "query": "Cornell Law School Legal Information Institute fifth section of federal rules alphabetically 'federal rules' 'alphabetically' fifth section 'witnesses' 'as of 2021' 'most titles' 'witnesses'",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 10.714285714285714,
+      "actor_time": 9.856857061386108,
+      "spec_time": 2.6508710384368896
+    },
+    {
+      "task_id": "c365c1c7-a3db-4d5e-a9a1-66f56eae7865",
+      "question": "Of the cities within the United States where U.S. presidents were born, which two are the farthest apart from the westernmost to the easternmost going east, giving the city names only? Give them to me in alphabetical order, in a comma-separated list",
+      "actor_tools": [],
+      "spec_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "list of U.S. presidents birthplaces city and state coordinates",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 51.158710956573486,
+      "spec_time": 8.69727110862732
+    },
+    {
+      "task_id": "7d4a7d1d-cac6-44a8-96e8-ea9584a70825",
+      "question": "According to Girls Who Code, how long did it take in years for the percentage of computer scientists that were women to change by 13% from a starting point of 37%?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Girls Who Code 37% to 24% 13% how long did it take years 'percentage of computer scientists that were women' 'Girls Who Code'"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Girls Who Code 37% 24% 13% years percentage of computer scientists that were women 37% change by 13% how long did it take",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 65.38461538461539,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Girls Who Code 37% to 24% 13% how long did it take years 'percentage of computer scientists that were women' 'Girls Who Code'"
+          },
+          "spec_args": {
+            "query": "Girls Who Code 37% 24% 13% years percentage of computer scientists that were women 37% change by 13% how long did it take",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 65.38461538461539,
+      "actor_time": 4.926943063735962,
+      "spec_time": 3.4265799522399902
+    },
+    {
+      "task_id": "dc22a632-937f-4e6a-b72f-ba0ff3f5ff97",
+      "question": "What was the complete title of the book in which two James Beard Award winners recommended the restaurant where Ali Khan enjoyed a New Mexican staple in his cost-conscious TV show that started in 2015? Write the numbers in plain text if there are some in the title.",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Ali Khan Cheap Eats New Mexican staple enjoyed at a restaurant recommended by two James Beard Award winners book recommendation complete title",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Ali Khan cost-conscious TV show started in 2015 New Mexican staple restaurant recommended by two James Beard Award winners book which book recommended the restaurant where Ali Khan enjoyed a New Mexican staple 'Ali Khan' 'cost-conscious' '2015' New Mexican staple restaurant recommended by two James Beard Award winners book title",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 48.57142857142857,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Ali Khan Cheap Eats New Mexican staple enjoyed at a restaurant recommended by two James Beard Award winners book recommendation complete title",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Ali Khan cost-conscious TV show started in 2015 New Mexican staple restaurant recommended by two James Beard Award winners book which book recommended the restaurant where Ali Khan enjoyed a New Mexican staple 'Ali Khan' 'cost-conscious' '2015' New Mexican staple restaurant recommended by two James Beard Award winners book title",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 48.57142857142857,
+      "actor_time": 9.383131980895996,
+      "spec_time": 4.6431097984313965
+    },
+    {
+      "task_id": "3f57289b-8c60-48be-bd80-01f8099ca449",
+      "question": "How many at bats did the Yankee with the most walks in the 1977 regular season have that same season?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "1977 New York Yankees walks leader team leader walks 1977",
+            "expand_search": false
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "1977 New York Yankees most walks 1977 season walks leader Yankees 1977 walks team",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 77.77777777777779,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "1977 New York Yankees walks leader team leader walks 1977",
+            "expand_search": false
+          },
+          "spec_args": {
+            "query": "1977 New York Yankees most walks 1977 season walks leader Yankees 1977 walks team",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 77.77777777777779,
+      "actor_time": 5.117516994476318,
+      "spec_time": 3.7100601196289062
+    },
+    {
+      "task_id": "23dd907f-1261-4488-b21c-e9185af91d5e",
+      "question": "In Audre Lorde\u2019s poem \u201cFather Son and Holy Ghost\u201d, what is the number of the stanza in which some lines are indented?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Audre Lorde \"Father Son and Holy Ghost\" poem stanza indented lines which stanza number"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Audre Lorde 'Father Son and Holy Ghost' stanza indented lines which stanza indented",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 60.0,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Audre Lorde \"Father Son and Holy Ghost\" poem stanza indented lines which stanza number"
+          },
+          "spec_args": {
+            "query": "Audre Lorde 'Father Son and Holy Ghost' stanza indented lines which stanza indented",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 60.0,
+      "actor_time": 3.7451698780059814,
+      "spec_time": 2.075005054473877
+    },
+    {
+      "task_id": "1f975693-876d-457b-a649-393859e79bf3",
+      "question": "Hi, I was out sick from my classes on Friday, so I'm trying to figure out what I need to study for my Calculus mid-term next week. My friend from class sent me an audio recording of Professor Willowbrook giving out the recommended reading for the test, but my headphones are broken :(\n\nCould you please listen to the recording for me and tell me the page numbers I'm supposed to go over? I've attached a file called Homework.mp3 that has the recording. Please provide just the page numbers as a comma-delimited list. And please provide the list in ascending order.",
+      "actor_tools": [],
+      "spec_tools": [
+        {
+          "name": "file_read",
+          "args": {
+            "path": "Homework.mp3"
+          }
+        }
+      ],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 19.730699062347412,
+      "spec_time": 5.072924375534058
+    },
+    {
+      "task_id": "840bfca7-4f7b-481a-8794-c560c340185d",
+      "question": "On June 6, 2023, an article by Carolyn Collins Petersen was published in Universe Today. This article mentions a team that produced a paper about their observations, linked at the bottom of the article. Find this paper. Under what NASA award number was the work performed by R. G. Arendt supported by?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "site:universetoday.com Carolyn Collins Petersen June 6, 2023 Universe Today article observations linked at the bottom R. G. Arendt award number NASA"
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "June 6, 2023 Carolyn Collins Petersen Universe Today team produced a paper observations linked at bottom 'Universe Today' June 6 2023 Carolyn Collins-Petersen article team produced a paper linked at bottom observations"
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 44.827586206896555,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "site:universetoday.com Carolyn Collins Petersen June 6, 2023 Universe Today article observations linked at the bottom R. G. Arendt award number NASA"
+          },
+          "spec_args": {
+            "query": "June 6, 2023 Carolyn Collins Petersen Universe Today team produced a paper observations linked at bottom 'Universe Today' June 6 2023 Carolyn Collins-Petersen article team produced a paper linked at bottom observations"
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 44.827586206896555,
+      "actor_time": 4.618040084838867,
+      "spec_time": 3.908283233642578
+    },
+    {
+      "task_id": "a0068077-79f4-461a-adfe-75c1a4148545",
+      "question": "What was the actual enrollment count of the clinical trial on H. pylori in acne vulgaris patients from Jan-May 2018 as listed on the NIH website?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "ClinicalTrials.gov H. pylori acne vulgaris Jan May 2018 actual enrollment",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "H. pylori acne vulgaris Jan-May 2018 NIH actual enrollment clinical trial 'H. pylori' 'acne vulgaris' 'ClinicalTrials.gov' 'Jan-May 2018'",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 33.33333333333333,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "ClinicalTrials.gov H. pylori acne vulgaris Jan May 2018 actual enrollment",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "H. pylori acne vulgaris Jan-May 2018 NIH actual enrollment clinical trial 'H. pylori' 'acne vulgaris' 'ClinicalTrials.gov' 'Jan-May 2018'",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 33.33333333333333,
+      "actor_time": 3.6312851905822754,
+      "spec_time": 10.29577922821045
+    },
+    {
+      "task_id": "bda648d7-d618-4883-88f4-3466eabd860e",
+      "question": "Where were the Vietnamese specimens described by Kuznetzov in Nedoshivina's 2010 paper eventually deposited? Just give me the city name without abbreviations.",
+      "actor_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "Nedoshivina 2010 Kuznetzov Vietnamese specimens eventually deposited city",
+            "expand_search": true
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_with_content",
+          "args": {
+            "query": "Nedoshivina 2010 Kuznetzov Vietnamese specimens deposited where 'Nedoshivina 2010' Kuznetzov Vietnamese specimens deposited",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 54.54545454545454,
+          "actor_tool": "search_with_content",
+          "spec_tool": "search_with_content",
+          "actor_args": {
+            "query": "Nedoshivina 2010 Kuznetzov Vietnamese specimens eventually deposited city",
+            "expand_search": true
+          },
+          "spec_args": {
+            "query": "Nedoshivina 2010 Kuznetzov Vietnamese specimens deposited where 'Nedoshivina 2010' Kuznetzov Vietnamese specimens deposited",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 54.54545454545454,
+      "actor_time": 3.2082769870758057,
+      "spec_time": 2.3829479217529297
+    },
+    {
+      "task_id": "50ec8903-b81f-4257-9450-1085afd2c319",
+      "question": "A standard Rubik\u2019s cube has been broken into cubes making up its sides. The cubes are jumbled, and one is removed. There are 6 cubes with one colored face, 12 edge cubes with two colored faces, and 8 corner cubes with three colored faces. All blue cubes have been found. All cubes directly left, right, above, and below the orange center cube have been found, along with the center cube. The green corners have all been found, along with all green that borders yellow. For all orange cubes found, the opposite face\u2019s cubes have been found. The removed cube has two colors on its faces. What are they? Answer using a comma separated list, with the colors ordered alphabetically.",
+      "actor_tools": [],
+      "spec_tools": [
+        {
+          "name": "code_generate",
+          "args": {
+            "task_description": "Generate Python code that models a Rubik's cube pieces (centers, edges, corners) with a standard color mapping: Up=white, Down=yellow, Front=green, Back=blue, Left=orange, Right=red. List all pieces with their sticker colors (for centers one color, for edges two colors, for corners three colors). Then apply constraints: \n- All blue cubes have been found.\n- All cubes directly left, right, above, and below the orange center cube have been found, along with the orange center cube. (These are the four edges on the orange face plus the orange center.)\n- The green corners have all been found (all corners that include green sticker are found), along with all green that borders yellow (so any edge that has both green and yellow is found).\n- For all orange cubes found, the opposite face\u2019s cubes have been found. Interpret this as: for any piece that includes orange, the piece in the mirror position across the cube (replacing each face with its opposite face) is also found. For mapping opposites use White<->Yellow, Green<->Blue, Orange<->Red.\n\nThen determine which edge piece(s) remain not found (i.e., possible removed pieces). Print their color pairs (alphabetically ordered within each pair and overall list sorted).",
+            "context": ""
+          }
+        }
+      ],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 65.48565196990967,
+      "spec_time": 28.822025060653687
+    },
+    {
+      "task_id": "cf106601-ab4f-4af9-b045-5295fe67b37d",
+      "question": "What country had the least number of athletes at the 1928 Summer Olympics? If there's a tie for a number of athletes, return the first in alphabetical order. Give the IOC country code as your answer.",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "1928 Summer Olympics number of competitors by nation",
+            "expand_search": false
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "1928 Summer Olympics number of athletes by country list participants IOC country code 1928 Amsterdam delegation sizes"
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 35.294117647058826,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "1928 Summer Olympics number of competitors by nation",
+            "expand_search": false
+          },
+          "spec_args": {
+            "query": "1928 Summer Olympics number of athletes by country list participants IOC country code 1928 Amsterdam delegation sizes"
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 35.294117647058826,
+      "actor_time": 7.015432834625244,
+      "spec_time": 2.819751024246216
+    },
+    {
+      "task_id": "a0c07678-e491-4bbc-8f0b-07405144218f",
+      "question": "Who are the pitchers with the number before and after Taish\u014d Tamai's number as of July 2023? Give them to me in the form Pitcher Before, Pitcher After, use their last names only, in Roman characters.",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Taish\u014d Tamai pitcher number July 2023",
+            "expand_search": false
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Taish\u014d Tamai number Taisho Tamai jersey number Tamai Taisho July 2023 pitcher number before after roster",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 54.54545454545454,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Taish\u014d Tamai pitcher number July 2023",
+            "expand_search": false
+          },
+          "spec_args": {
+            "query": "Taish\u014d Tamai number Taisho Tamai jersey number Tamai Taisho July 2023 pitcher number before after roster",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 54.54545454545454,
+      "actor_time": 5.028139114379883,
+      "spec_time": 2.963667869567871
+    },
+    {
+      "task_id": "7bd855d8-463d-4ed5-93ca-5fe35145f733",
+      "question": "The attached Excel file contains the sales of menu items for a local fast-food chain. What were the total sales that the chain made from food (not including drinks)? Express your answer in USD with two decimal places.",
+      "actor_tools": [],
+      "spec_tools": [],
+      "matches": [],
+      "exact_match": false,
+      "avg_args_similarity": 0.0,
+      "actor_time": 16.300289154052734,
+      "spec_time": 6.631017446517944
+    },
+    {
+      "task_id": "5a0c1adf-205e-4841-a666-7c3ef95def9d",
+      "question": "What is the first name of the only Malko Competition recipient from the 20th Century (after 1977) whose nationality on record is a country that no longer exists?",
+      "actor_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Malko Competition winners list nationality on record country that no longer exists 20th century after 1977",
+            "expand_search": false
+          }
+        }
+      ],
+      "spec_tools": [
+        {
+          "name": "search_web",
+          "args": {
+            "query": "Malko Competition recipients list 1977 20th Century nationality country no longer exists Malko Competition winners list nationality",
+            "expand_search": true
+          }
+        }
+      ],
+      "matches": [
+        {
+          "tool_match": true,
+          "args_similarity": 70.58823529411765,
+          "actor_tool": "search_web",
+          "spec_tool": "search_web",
+          "actor_args": {
+            "query": "Malko Competition winners list nationality on record country that no longer exists 20th century after 1977",
+            "expand_search": false
+          },
+          "spec_args": {
+            "query": "Malko Competition recipients list 1977 20th Century nationality country no longer exists Malko Competition winners list nationality",
+            "expand_search": true
+          }
+        }
+      ],
+      "exact_match": false,
+      "avg_args_similarity": 70.58823529411765,
+      "actor_time": 3.078885078430176,
+      "spec_time": 2.3725523948669434
+    }
+  ]
+}

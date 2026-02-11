@@ -1,0 +1,14 @@
+{
+  "task_id": "65638e28-7f37-4fa7-b7b9-8c19bb609879",
+  "question": "The book with the doi 10.1353/book.24372 concerns a certain neurologist. According to chapter 2 of the book, what author influenced this neurologist\u2019s belief in \u201cendopsychic myths\u201d? Give the last name only.",
+  "level": "2",
+  "final_answer": "Kleinpaul",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the web for 10.1353/book.24372.\n2. Click link to read the book.\n3. Click link for the second chapter.\n4. Ctrl-F for \u201cendopsychic\u201d to find a relevant passage.\n5. Read the passage to find the author the question is asking about, Kleinpaul.",
+    "Number of steps": "5",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Search engine\n2. Web browser\n3. PDF viewer",
+    "Number of tools": "3"
+  }
+}

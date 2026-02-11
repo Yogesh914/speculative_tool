@@ -1,0 +1,14 @@
+{
+  "task_id": "0bb3b44a-ede5-4db5-a520-4e844b0079c5",
+  "question": "Consider the following symbols: \ud809\udc1c  \ud809\udc10\ud809\udc1a\n\nThis is a number written using the Mesopotamian/Babylonian number system and represented with Sumerian cuneiform. Convert this number into Arabic numerals as a decimal number.",
+  "level": "2",
+  "final_answer": "536",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Look up Babylonian number system (base 60, using uniform 'hashmarks' as counters)\n2. Converted the Cuniform to Arabic (8 56)\n3. Since Babylonian is a base 60 system, converted the \"60\"'s place to decimal (8*60=480)\n4. Added 56 to 480 (536).",
+    "Number of steps": "4",
+    "How long did this take?": "10 minutes",
+    "Tools": "1. Bablyonian cuniform -> arabic legend",
+    "Number of tools": "1"
+  }
+}

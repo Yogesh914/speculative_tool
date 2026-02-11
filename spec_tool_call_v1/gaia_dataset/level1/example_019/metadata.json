@@ -1,0 +1,14 @@
+{
+  "task_id": "5188369a-3bbe-43d8-8b94-11558f909a08",
+  "question": "What writer is quoted by Merriam-Webster for the Word of the Day from June 27, 2022?",
+  "level": "1",
+  "final_answer": "Annie Levin",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search \"merriam-webster word of the day\" on Google search.\n2. Opened the top \"Word of the Day\" result from the Merriam-Webster dictionary online.\n3. Clicked \"SEE ALL WORDS OF THE DAY\" at the bottom.\n4. Scrolled down to June 27, 2022.\n5. Opened the Word of the Day (\"jingoism\").\n6. Scrolled down and identified context quote for \"jingoism\".\n7. Noted the name attributed to the quote. ",
+    "Number of steps": "7",
+    "How long did this take?": "8 minutes",
+    "Tools": "1. Web browser\n2. Search engine\n3. Audio capability",
+    "Number of tools": "3"
+  }
+}

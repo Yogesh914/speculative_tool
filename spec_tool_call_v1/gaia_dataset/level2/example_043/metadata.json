@@ -1,0 +1,14 @@
+{
+  "task_id": "48eb8242-1099-4c26-95d4-ef22b002457a",
+  "question": "How many nonindigenous crocodiles were found in Florida from the year 2000 through 2020? You can get the data from the USGS Nonindigenous Aquatic Species database.",
+  "level": "2",
+  "final_answer": "6",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the web for \u201cusgs nonnative aquatic species database\u201d.\n2. Navigate to the database of reptiles.\n3. For each species called a \u201ccrocodile\u201d, click Collection Info.\n4. Count instances where a crocodile was found in both Florida and in the specified date range.",
+    "Number of steps": "4",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Search engine\n2. Web browser",
+    "Number of tools": "2"
+  }
+}

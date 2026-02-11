@@ -1,0 +1,14 @@
+{
+  "task_id": "e9a2c537-8232-4c3f-85b0-b52de6bcba99",
+  "question": "The attached file shows a list of books in the collection of Scribe County Public Library. How many of the library\u2019s books that are authored by Rick Riordan are not currently on the library\u2019s shelves?",
+  "level": "2",
+  "final_answer": "7",
+  "file_name": "e9a2c537-8232-4c3f-85b0-b52de6bcba99.pdf",
+  "annotator_metadata": {
+    "Steps": "1. Open the file.\n2. Count books where the author is \u201cRick Riodan\u201d and the status is either \u201cChecked Out\u201d or \u201cOverdue\u201d.",
+    "Number of steps": "2",
+    "How long did this take?": "1 minute",
+    "Tools": "1. PDF viewer",
+    "Number of tools": "1"
+  }
+}

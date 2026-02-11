@@ -1,0 +1,14 @@
+{
+  "task_id": "a0068077-79f4-461a-adfe-75c1a4148545",
+  "question": "What was the actual enrollment count of the clinical trial on H. pylori in acne vulgaris patients from Jan-May 2018 as listed on the NIH website?",
+  "level": "1",
+  "final_answer": "90",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"nih\" on Google search.\n2. Clicked the top link to nih.gov.\n3. Searched \"h pylori acne\" in the search box.\n4. Clicked \"More\" and selected \"Clinical Trials\".\n5. Clicked the result about H. Pylori and acne.\n6. Checked the date to confirm it was January to May 2018.\n7. Opened \"Tabular View\".\n8. Scrolled down to Actual Enrollment and recorded the number.",
+    "Number of steps": "8",
+    "How long did this take?": "8 minutes",
+    "Tools": "1. Search engine\n2. Web browser",
+    "Number of tools": "2"
+  }
+}

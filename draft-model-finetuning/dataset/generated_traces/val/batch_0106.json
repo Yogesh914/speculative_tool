@@ -1,0 +1,39 @@
+```json
+[
+  {
+    "id": "3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee",
+    "question": "The longest-lived vertebrate is named after an island.  According to Wikipedia as of January 1, 2021, what is the 2020 estimated population of that island, to the nearest thousand?",
+    "trace": [
+      {
+        "thought": "First, I need to identify the longest-lived vertebrate. I will use a search engine for this.",
+        "action": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "longest-lived vertebrate"
+          }
+        }
+      },
+      {
+        "thought": "The search results indicate that the Greenland shark is the longest-lived vertebrate. The name suggests it is named after Greenland. Now I need to find the population of Greenland according to its Wikipedia page as of January 1, 2021.",
+        "action": {
+          "tool_name": "wiki",
+          "arguments": {
+            "page_title": "Greenland",
+            "date": "2021-01-01"
+          }
+        }
+      },
+      {
+        "thought": "I have the content of the Wikipedia page for Greenland as of January 1, 2021. I need to find the 2020 estimated population. I will search the text for '2020' and 'population'. The text contains '56,081 (2020 estimate)'. Now I need to round this number to the nearest thousand.",
+        "action": {
+          "tool_name": "calculator",
+          "arguments": {
+            "expression": "round(56081, -3)"
+          }
+        }
+      }
+    ],
+    "final_answer": "56000"
+  }
+]
+```

@@ -1,0 +1,14 @@
+{
+  "task_id": "840bfca7-4f7b-481a-8794-c560c340185d",
+  "question": "On June 6, 2023, an article by Carolyn Collins Petersen was published in Universe Today. This article mentions a team that produced a paper about their observations, linked at the bottom of the article. Find this paper. Under what NASA award number was the work performed by R. G. Arendt supported by?",
+  "level": "1",
+  "final_answer": "80GSFC21M0002",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Google \"June 6, 2023 Carolyn Collins Petersen Universe Today\"\n2. Find the relevant link to the scientific paper and follow that link\n3. Open the PDF. \n4. Search for NASA award number",
+    "Number of steps": "4",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Web browser\n2. Search engine\n3. Access to academic journal websites",
+    "Number of tools": "2"
+  }
+}

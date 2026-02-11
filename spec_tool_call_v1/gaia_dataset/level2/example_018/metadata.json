@@ -1,0 +1,14 @@
+{
+  "task_id": "a7feb290-76bb-4cb7-8800-7edaf7954f2f",
+  "question": "How many High Energy Physics - Lattice articles listed in January 2020 on Arxiv had ps versions available?",
+  "level": "2",
+  "final_answer": "31",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"arxiv\" on Google.\n2. Opened the top result of https://arxiv.org/.\n3. Opened the High Energy Physics - Lattice section.\n4. Set the date to 2020 January.\n5. Counted the number of articles with \"ps\" formats available on each page.\n6. Added the numbers from each page to get the total.",
+    "Number of steps": "6",
+    "How long did this take?": "15 minutes",
+    "Tools": "1. Search engine\n2. Web browser\n3. Calculator",
+    "Number of tools": "3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "8d46b8d6-b38a-47ff-ac74-cda14cf2d19b",
+  "question": "What percentage of the total penguin population according to the upper estimates on english Wikipedia at the end of 2012 is made up by the penguins in this file that don't live on Dream Island or have beaks longer than 42mm? Round to the nearest five decimal places.",
+  "level": "3",
+  "final_answer": "0.00033",
+  "file_name": "8d46b8d6-b38a-47ff-ac74-cda14cf2d19b.csv",
+  "annotator_metadata": {
+    "Steps": "1. Opened the file in Excel.\n2. Counted the penguins that are not on Dream Island with bills shorter than 42mm using `COUNTIFS(C1:C345, \">42\", B1:B345, \"<>Dream\")` (132).\n3. Searched \"wikipedia penguin populations\" on Google search.\n4. Opened the \"List of Sphenisciformes by population\" Wikipedia page.\n5. Clicked \"View history\" to see the history of the page.\n6. Opened the last 2012 version.\n7. Added up the penguin species populations (39808770).\n8. Calculated the percentage (132 / 39808770 * 100% = 0.00033158%).\n9. Converted to scientific notation (3.3 x 10^-4%).",
+    "Number of steps": "9",
+    "How long did this take?": "15 minutes",
+    "Tools": "1. CSV file access\n2. Web browser\n3. Search engine\n4. Calculator (or use Excel)",
+    "Number of tools": "4"
+  }
+}

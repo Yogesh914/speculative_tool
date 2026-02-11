@@ -1,0 +1,14 @@
+{
+  "task_id": "a0c07678-e491-4bbc-8f0b-07405144218f",
+  "question": "Who are the pitchers with the number before and after Taish\u014d Tamai's number as of July 2023? Give them to me in the form Pitcher Before, Pitcher After, use their last names only, in Roman characters.",
+  "level": "1",
+  "final_answer": "Yoshida, Uehara",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Look up Taish\u014d Tamai on Wikipedia\n2. See the pitcher with the number 18 (before) is K\u014dsei Yoshida and number 20 (after) is Kenta Uehara",
+    "Number of steps": "2",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Wikipedia",
+    "Number of tools": "1"
+  }
+}

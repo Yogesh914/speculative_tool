@@ -1,0 +1,14 @@
+{
+  "task_id": "5b2a14e8-6e59-479c-80e3-4696e8980152",
+  "question": "The brand that makes these harnesses the dogs are wearing in the attached pic shares stories from their ambassadors on their website. What meat is mentioned in the story added Dec 8th 2022?",
+  "level": "3",
+  "final_answer": "bacon",
+  "file_name": "5b2a14e8-6e59-479c-80e3-4696e8980152.jpg",
+  "annotator_metadata": {
+    "Steps": "1. Use image search for \"dog harness brands with yellow logos\"\n2. Look at harnesses until a similar harness shows up\n3. Click through to see the harness\n4. Search \"ruffwear\"\n5. Go to the website\n6. Navigate to stories\n7. Find the story posted Dec 8th 2022\n8. Read the story to find any meats mentioned",
+    "Number of steps": "8",
+    "How long did this take?": "15 minutes",
+    "Tools": "1. image recognition tools\n2. image search tools\n3. web browser\n4. search engine",
+    "Number of tools": "4"
+  }
+}

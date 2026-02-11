@@ -1,0 +1,14 @@
+{
+  "task_id": "32102e3e-d12a-4209-9163-7b3a104efe5d",
+  "question": "The attached spreadsheet shows the inventory for a movie and video game rental store in Seattle, Washington. What is the title of the oldest Blu-Ray recorded in this spreadsheet? Return it as appearing in the spreadsheet.",
+  "level": "2",
+  "final_answer": "Time-Parking 2: Parallel Universe",
+  "file_name": "32102e3e-d12a-4209-9163-7b3a104efe5d.xlsx",
+  "annotator_metadata": {
+    "Steps": "1. Open the attached file.\n2. Compare the years given in the Blu-Ray section to find the oldest year, 2009.\n3. Find the title of the Blu-Ray disc that corresponds to the year 2009: Time-Parking 2: Parallel Universe.",
+    "Number of steps": "3",
+    "How long did this take?": "1 minute",
+    "Tools": "1. Microsoft Excel",
+    "Number of tools": "1"
+  }
+}

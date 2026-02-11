@@ -1,0 +1,14 @@
+{
+  "task_id": "114d5fd0-e2ae-4b6d-a65a-870da2d19c08",
+  "question": "In the endnote found in the second-to-last paragraph of page 11 of the book with the doi 10.2307/j.ctv9b2xdv, what date in November was the Wikipedia article accessed? Just give the day of the month.",
+  "level": "2",
+  "final_answer": "4",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Look up the doi.\n2. Click on the JSTOR result.\n3. Find the chapter with page 11, and click to read it.\n4. Navigate to page 11.\n5. Identify the footnote in the second-to-last paragraph.\n6. Scroll to the end of the chapter to read the footnote.\n7. Note the date given after the Wikipedia link.",
+    "Number of steps": "7",
+    "How long did this take?": "5-10 minutes",
+    "Tools": "1. Search engine\n2. Web browser\n3. OCR",
+    "Number of tools": "3"
+  }
+}

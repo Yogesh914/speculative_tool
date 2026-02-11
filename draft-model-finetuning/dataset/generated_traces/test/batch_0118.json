@@ -1,0 +1,56 @@
+```json
+[
+  {
+    "id": "9e1fc53b-46ff-49a1-9d05-9e6faac34cc5",
+    "question": "A 5-man group made up of one tank, one healer, and three DPS is doing a dungeon that was just released in World of Warcraft. Two are plate wearers and two are cloth wearers. At the final boss, both the tank and the healer are casting holy spells. Ice and fire are being used, each one by a different DPS. A bear from the group is attacking the boss. Metamorphosis is cast. The Kilt of the Forgotten One drops as loot, but no one can use it. If all classes were using their class abilities and all classes are unique, what are the five classes in the group in alphabetical order separated by commas?",
+    "trace": [
+      {
+        "thought": "First, I need to identify the constraints and clues from the question.\n1.  **Group:** 5 members (1 tank, 1 healer, 3 DPS).\n2.  **Armor:** 2 plate, 2 cloth. This means the 5th member wears mail or leather.\n3.  **Loot:** \"Kilt of the Forgotten One\" drops, but no one can use it. I need to find out what armor type this is to exclude classes.\n4.  **Abilities & Spells:**\n    *   Tank & Healer use holy spells.\n    *   Ice & Fire used by two different DPS.\n    *   A bear is attacking.\n    *   Metamorphosis is cast.\n5.  **Classes:** All 5 classes are unique.\n\nMy first step is to identify the armor type of the \"Kilt of the Forgotten One\" to determine which classes are NOT in the group.",
+        "action": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "World of Warcraft Kilt of the Forgotten One armor type"
+          }
+        }
+      },
+      {
+        "thought": "The search results indicate that the \"Kilt of the Forgotten One\" is a leather armor item. Since no one in the group can use it, this means there are no leather-wearing classes in the group. The leather-wearing classes are Druid, Rogue, Monk, and Demon Hunter. So, these four classes are excluded.\n\nNow I know the group composition is 2 plate, 2 cloth, and 1 mail wearer (since leather is excluded).\n\nNext, I'll identify the tank and healer. The clue is that both are casting holy spells. I will search for WoW classes that use holy spells and can fill the tank and healer roles.",
+        "action": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "WoW classes that use holy spells"
+          }
+        }
+      },
+      {
+        "thought": "The primary users of holy spells are Paladins and Priests. Paladins can be tanks or healers and wear plate armor. Priests are healers and wear cloth armor. This fits the clue perfectly: a Paladin (tank, plate) and a Priest (healer, cloth). This accounts for one plate wearer and one cloth wearer.\n\nSo far, the group is:\n*   Paladin (Tank, Plate)\n*   Priest (Healer, Cloth)\n\nNext, I'll investigate the \"Metamorphosis\" ability to identify one of the DPS.",
+        "action": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "WoW class with Metamorphosis ability"
+          }
+        }
+      },
+      {
+        "thought": "The search results show that historically, Warlocks had a Metamorphosis ability (especially in the Wrath of the Lich King era, which is when the Kilt of the Forgotten One was introduced). Demon Hunters also have this ability, but they are a leather-wearing class and have already been excluded. Therefore, a Warlock must be in the group. Warlocks are a DPS class that wears cloth armor.\n\nSo far, the group is:\n*   Paladin (Tank, Plate)\n*   Priest (Healer, Cloth)\n*   Warlock (DPS, Cloth)\n\nThis accounts for one plate wearer and both cloth wearers. The remaining two DPS must be the second plate wearer and the mail wearer.\n\nNext, I'll address the clue about a bear attacking the boss.",
+        "action": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "WoW classes with a bear"
+          }
+        }
+      },
+      {
+        "thought": "A bear can be either a Druid in bear form or a Hunter's pet. Since Druids are a leather-wearing class and have been excluded, the bear must be a Hunter's pet. Hunters are a DPS class that wears mail armor.\n\nNow the group is:\n*   Paladin (Tank, Plate)\n*   Priest (Healer, Cloth)\n*   Warlock (DPS, Cloth)\n*   Hunter (DPS, Mail)\n\nThis fills the mail armor slot. The final member must be the second plate-wearing DPS.\n\nThe remaining clue is that ice and fire are being used by two different DPS. The DPS are Warlock, Hunter, and the unknown plate DPS. Warlocks are well-known for using fire spells. Hunters can also use some fire abilities. The final plate DPS must be the one using ice spells.\n\nThe possible plate-wearing DPS classes are Warrior, Paladin, and Death Knight. Paladin is already in the group. Warriors do not use ice spells. Death Knights have a Frost specialization that uses ice spells.\n\nTherefore, the final class must be a Death Knight.\n\nLet's verify the final group: Paladin, Priest, Warlock, Hunter, Death Knight.\n*   **Roles:** 1 Tank (Paladin), 1 Healer (Priest), 3 DPS (Warlock, Hunter, Death Knight) - Correct.\n*   **Armor:** 2 Plate (Paladin, Death Knight), 2 Cloth (Priest, Warlock), 1 Mail (Hunter) - Correct.\n*   **Holy Spells:** Paladin and Priest - Correct.\n*   **Ice/Fire:** Death Knight (Ice) and Warlock (Fire) - Correct.\n*   **Bear:** Hunter's pet - Correct.\n*   **Metamorphosis:** Warlock - Correct.\n*   **Loot:** Kilt of the Forgotten One (Leather) is unusable as there are no leather wearers - Correct.\n*   **Unique Classes:** All five are unique - Correct.\n\nThe five classes are Death Knight, Hunter, Paladin, Priest, and Warlock. I need to list them in alphabetical order.",
+        "action": {
+          "tool_name": "final_answer",
+          "arguments": {
+            "answer": "Death Knight, Hunter, Paladin, Priest, Warlock"
+          }
+        }
+      }
+    ],
+    "final_answer": "Death Knight, Hunter, Paladin, Priest, Warlock"
+  }
+]
+```

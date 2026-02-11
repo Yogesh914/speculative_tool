@@ -1,0 +1,14 @@
+{
+  "task_id": "a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c",
+  "question": "How many slides in this PowerPoint presentation mention crustaceans?",
+  "level": "1",
+  "final_answer": "4",
+  "file_name": "a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c.pptx",
+  "annotator_metadata": {
+    "Steps": "1. Open the provided file.\n2. Scroll through the presentation, noting the animal names on each slide.\n3. Search the web for \u201ccrayfish\u201d to verify that they are crustaceans.\n4. Read the results, noting that they are crustaceans.\n5. Search the web for \u201cisopods\u201d to verify whether they are crustaceans.\n6. Read the results, noting that they are.\n7. Since I\u2019m confident that I know whether all of the other animals are crustaceans, I count the ones that are to get the answer, 4.",
+    "Number of steps": "7",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. PowerPoint viewer",
+    "Number of tools": "1"
+  }
+}

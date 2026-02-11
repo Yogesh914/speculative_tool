@@ -1,0 +1,14 @@
+{
+  "task_id": "50f58759-7bd6-406f-9b0d-5692beb2a926",
+  "question": "How many times was a Twitter/X post cited as a reference on the english Wikipedia pages for each day of August in the last June 2023 versions of the pages?",
+  "level": "3",
+  "final_answer": "3",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Searched \"August Wikipedia\" on Google search.\n2. Opened the Wikipedia page for the month of August.\n3. Clicked on \"View history\" on the \"August 1\" page.\n4. Went back to the last edited version prior to July 2023.\n5. Checked the references for Twitter posts.\n6. Repeated the process for each day of August.\n7. Counted the Twitter posts found.",
+    "Number of steps": "7",
+    "How long did this take?": "8 minutes",
+    "Tools": "1. Web browser\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

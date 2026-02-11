@@ -1,0 +1,14 @@
+{
+  "task_id": "3f57289b-8c60-48be-bd80-01f8099ca449",
+  "question": "How many at bats did the Yankee with the most walks in the 1977 regular season have that same season?",
+  "level": "1",
+  "final_answer": "519",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search \"yankee stats\" to find their MLB stats page.\n2. Set the data to the 1977 regular season.\n3. Sort to find the most walks.\n4. See how many at bats the player had.",
+    "Number of steps": "4",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. web browser\n2. search engine",
+    "Number of tools": "2"
+  }
+}

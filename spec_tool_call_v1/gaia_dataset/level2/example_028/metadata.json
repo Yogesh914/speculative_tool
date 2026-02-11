@@ -1,0 +1,14 @@
+{
+  "task_id": "544b7f0c-173a-4377-8d56-57b36eb26ddf",
+  "question": "In Valentina Re\u2019s contribution to the 2017 book \u201cWorld Building: Transmedia, Fans, Industries\u201d, what horror movie does the author cite as having popularized metalepsis between a dream world and reality? Use the complete name with article if any.",
+  "level": "2",
+  "final_answer": "A Nightmare on Elm Street",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the web for \u201cworld building transmedia fans industries\u201d.\n2. Click link to PDF of the book.\n3. Navigate to the Media Cited section of the essay written by Valentina Re.\n4. Identify the horror movie, A Nightmare on Elm Street.\n5. Navigate to its mention in the essay, to confirm that it does relate to metalepsis from a dream world.",
+    "Number of steps": "5",
+    "How long did this take?": "5-10 minutes",
+    "Tools": "1. Search engine\n2. Web browser\n3. PDF viewer",
+    "Number of tools": "3"
+  }
+}

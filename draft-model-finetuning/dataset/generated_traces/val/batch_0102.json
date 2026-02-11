@@ -1,0 +1,47 @@
+```json
+[
+  {
+    "id": "56137764-b4e0-45b8-9c52-1866420c3df5",
+    "question": "Which contributor to the version of OpenCV where support was added for the Mask-RCNN model has the same name as a former Chinese head of government when the names are transliterated to the Latin alphabet?",
+    "trace": [
+      {
+        "thought": "First, I need to determine which version of OpenCV added support for the Mask-RCNN model. I will use a search engine to find the OpenCV changelog or release notes.",
+        "action": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "OpenCV changelog Mask-RCNN support"
+          }
+        }
+      },
+      {
+        "thought": "The search results indicate that Mask-RCNN support was added in OpenCV version 4.0.0. Now I need to find the list of contributors for this specific version. I will search for \"OpenCV 4.0.0 contributors\".",
+        "action": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "OpenCV 4.0.0 contributors list"
+          }
+        }
+      },
+      {
+        "thought": "I have found the release notes for OpenCV 4.0.0, which includes a list of contributors. Now I need to find a list of former Chinese heads of government. The head of government in the People's Republic of China is the Premier. I will search for a list of Premiers of China.",
+        "action": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "List of Premiers of the People's Republic of China"
+          }
+        }
+      },
+      {
+        "thought": "I now have two lists: the contributors to OpenCV 4.0.0 and the list of Premiers of China. I will compare the names on both lists to find a match. After reviewing both lists, I have found that the name 'Li Peng' appears on both the list of OpenCV 4.0.0 contributors and the list of former Premiers of China.",
+        "action": {
+          "tool_name": "final_answer",
+          "arguments": {
+            "answer": "Li Peng"
+          }
+        }
+      }
+    ],
+    "final_answer": "Li Peng"
+  }
+]
+```

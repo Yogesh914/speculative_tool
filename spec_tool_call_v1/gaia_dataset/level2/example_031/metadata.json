@@ -1,0 +1,14 @@
+{
+  "task_id": "08cae58d-4084-4616-b6dd-dd6534e4825b",
+  "question": "According to Google Finance, when was the first year the Apple stock went above $50 (without adjusting for stock split)?",
+  "level": "2",
+  "final_answer": "2018",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. typed in \"Google finance apple\" on browser\n2. clicked first link\n3. clicked \"max\" to display entire history of apple stock\n4. hovered mouse around the area that line crosses over $50\n5. noted the date",
+    "Number of steps": "5",
+    "How long did this take?": "4 minutes",
+    "Tools": "1. Web browser\n2. Search engine\n3. code/data analysis tools",
+    "Number of tools": "2"
+  }
+}

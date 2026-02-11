@@ -1,0 +1,14 @@
+{
+  "task_id": "f2feb6a4-363c-4c09-a804-0db564eafd68",
+  "question": "I\u2019m thinking about selling my home, so I want to learn more about how homes in my area sold recently. I live in Pearl City, Hawaii, which is on the island of Oahu. I know two homes near me that sold in 2022 were 2072 Akaikai Loop, and 2017 Komo Mai Drive. Find which of those homes sold for more in 2022, and tell me how much it sold for. Don\u2019t put commas or decimal places in the answer.",
+  "level": "2",
+  "final_answer": "900000",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the web for \u201c2072 akaikai loop pearl city hi\u201d.\n2. Click Zillow result.\n3. Navigate to \u201cPrice and tax history\u201d.\n4. Find the amount the house sold for when it was sold in 2022: $860,000.\n5. Search the web for \u201c2017 komo mai drive pearl city hi\u201d.\n6. Click Zillow result.\n7. Navigate to \u201cPrice and tax history\u201d.\n8. Find the amount the house sold for when it was sold in 2022: $900,000.\n9. Express the higher amount in the specified format, $900000.",
+    "Number of steps": "9",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Search engine\n2. Web browser",
+    "Number of tools": "2"
+  }
+}

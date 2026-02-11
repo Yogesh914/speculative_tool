@@ -1,0 +1,14 @@
+{
+  "task_id": "33d8ea3b-6c6b-4ff1-803d-7e270dea8a57",
+  "question": "What is the minimum number of page links a person must click on to go from the english Wikipedia page on The Lord of the Rings (the book) to the english Wikipedia page on A Song of Ice and Fire (the book series)? In your count, include each link you would click on to get to the page. Use the pages as they appeared at the end of the day on July 3, 2023.",
+  "level": "2",
+  "final_answer": "2",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the web for \u201clord of the rings wikipedia\u201d.\n2. Click on Wikipedia result.\n3. Click \u201cView history\u201d to see if the page has been edited since July 3, 2023.\n4. Since it hasn\u2019t been, return to the current revision.\n5. Ctrl-F for \u201csong\u201d to see if A Song of Ice and Fire is linked to on this page.\n6. Not seeing A Song of Ice and Fire on the current page, search for a link to a page that will likely mention A Song of Ice and Fire.\n7. Click the link for \u201cHigh fantasy\u201d.\n8. Click \u201cView history\u201d to see if the page has been edited since July 3, 2023.\n9. Since it hasn\u2019t been, return to the current revision.\n10. Ctrl-F for \u201csong\u201d, and find a link to A Song of Ice and Fire.\n11. Count the links: the High fantasy page and the A Song of Ice and Fire page make two.",
+    "Number of steps": "11",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Search engine\n2. Web browser\n3. Counter",
+    "Number of tools": "3"
+  }
+}

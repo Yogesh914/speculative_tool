@@ -1,0 +1,14 @@
+{
+  "task_id": "54612da3-fd56-4941-80f4-5eb82330de25",
+  "question": "The attached file shows the locomotives in the collection of a North American railroad museum. How many wheels do the listed steam locomotives have in total?",
+  "level": "2",
+  "final_answer": "60",
+  "file_name": "54612da3-fd56-4941-80f4-5eb82330de25.xlsx",
+  "annotator_metadata": {
+    "Steps": "1. Open the attached spreadsheet.\n2. Examine its structure, with the steam locomotives listed together and a column denoting the wheel configuration.\n3. Search the web for \u201csteam locomotive wheel configuration\u201d.\n4. Click Wikipedia result.\n5. Skim article to learn that the Whyte Notation is commonly used in North America.\n6. Click link to Whyte Notation article.\n7. Skim article to learn how to read the Whyte Notation: each number corresponds to the number of one type of wheel.\n8. Count the wheels listed for steam locomotives in the spreadsheet to get the answer, 60.",
+    "Number of steps": "8",
+    "How long did this take?": "5-10 minutes",
+    "Tools": "1. Microsoft Excel\n2. Search engine\n3. Web browser\n4. Calculator",
+    "Number of tools": "4"
+  }
+}

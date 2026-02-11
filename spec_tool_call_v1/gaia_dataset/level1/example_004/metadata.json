@@ -1,0 +1,14 @@
+{
+  "task_id": "a1e91b78-d3d8-4675-bb8d-62741b4b68a6",
+  "question": "In the video https://www.youtube.com/watch?v=L1vXCYZAYYM, what is the highest number of bird species to be on camera simultaneously?",
+  "level": "1",
+  "final_answer": "3",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Navigate to the YouTube link.\n2. Watch the video to see the highest number of bird species.\n3. Note the number.",
+    "Number of steps": "3",
+    "How long did this take?": "3 minutes",
+    "Tools": "1. Web browser\n2. Video parsing",
+    "Number of tools": "2"
+  }
+}

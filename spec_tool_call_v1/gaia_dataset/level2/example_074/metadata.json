@@ -1,0 +1,14 @@
+{
+  "task_id": "edd4d4f2-1a58-45c4-b038-67337af4e029",
+  "question": "The attached spreadsheet lists the locomotives owned by a local railroad museum. What is the typical American name for the type of locomotive this museum uses for the Murder Mystery Express?",
+  "level": "2",
+  "final_answer": "Berkshire",
+  "file_name": "edd4d4f2-1a58-45c4-b038-67337af4e029.xlsx",
+  "annotator_metadata": {
+    "Steps": "1. Open the provided spreadsheet.\n2. Locate the locomotive used for the Murder Mystery Express, which is listed as a steam locomotive with a 2-8-4 wheel configuration.\n3. Search the web for \u201c2-8-4 steam locomotive\u201d.\n4. Note the most common name for a locomotive with this wheel configuration, a Berkshire.",
+    "Number of steps": "4",
+    "How long did this take?": "5 minutes",
+    "Tools": "1. Microsoft Excel\n2. Search engine",
+    "Number of tools": "2"
+  }
+}

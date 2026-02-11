@@ -1,0 +1,14 @@
+{
+  "task_id": "5a0c1adf-205e-4841-a666-7c3ef95def9d",
+  "question": "What is the first name of the only Malko Competition recipient from the 20th Century (after 1977) whose nationality on record is a country that no longer exists?",
+  "level": "1",
+  "final_answer": "Claus",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Look at the Malko Competition page on Wikipedia\n2. Scan the winners to see that the 1983 winner, Claus Peter Flor is stated to be from East Germany.",
+    "Number of steps": "2",
+    "How long did this take?": "5-10 minutes",
+    "Tools": "None",
+    "Number of tools": "0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "71345b0a-9c7d-4b50-b2bf-937ec5879845",
+  "question": "On a leap day before the year 2008, a joke was removed from the Wikipedia page for \u201cDragon\u201d. What was the phrase that was removed? Give the phrase as it appeared on the page, but without punctuation.",
+  "level": "2",
+  "final_answer": "Here be dragons",
+  "file_name": "",
+  "annotator_metadata": {
+    "Steps": "1. Search the web for \u201cdragon wikipedia\u201d.\n2. Click the Wikipedia result.\n3. Click \u201cView history\u201d to see changes made to the page.\n4. Navigate through the edits until I get to the beginning of 2008.\n5. Browse the edits before 2008 for a change made on February 29, which would be a leap day.\n6. Find an edit made on February 29, 2004, with a comment indicating the prior edit was humorous.\n7. Click the February 29 version of the page, and examine it.\n8. Return to the revision history, and click the previous version of the page.\n9. Note the phrase at the top of the page that wasn\u2019t present in the later version: \u201cHere be dragons\u201d.",
+    "Number of steps": "9",
+    "How long did this take?": "10-15 minutes",
+    "Tools": "1. Search engine\n2. Web browser",
+    "Number of tools": "2"
+  }
+}
