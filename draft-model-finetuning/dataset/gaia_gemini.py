@@ -157,7 +157,7 @@ def generate_all_traces(api_key,
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--api_key", default="AIzaSyDhvpcy4JRELIfax4t4I2AACh2B94goE6I")
+    parser.add_argument("--api_key", default="")
     parser.add_argument("--input", default="gaia_2023_all_splits/test/*.json")
     parser.add_argument("--output", default="generated_traces/test")
     parser.add_argument("--batch_size", type=int, default=1)
